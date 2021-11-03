@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="box bg-dark dashboard-info">
+          <div class="user box">
+            <img src="./img/image-jeremy.png" alt="" />
+            <p>
+              <small>Report for</small><br />
+              Jeremy Robson
+            </p>
+          </div>
+          <div class="time-period">
+            <ul>
+              <li id="daily" class="period">Daily</li>
+              <li id="weekly" class="period active">Weekly</li>
+              <li id="monthly" class="period">Monthly</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reports-container">
+          <div>
+            <div class="icon icon-work box">
+              <img src="./img/icon-work.svg" alt="" class="box-icon" />
+            </div>
+            <div class="box bg-dark report">
+              <p class="title">Work</p>
+              <div class="circles">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+              </div>
+              <div class="time daily">
+                <p>5hrs</p>
+                <small>Yesterday - 7hrs</small>
+              </div>
+              <div class="time weekly show">
+                <p>32hrs</p>
+                <small>Last Week - 36hrs</small>
+              </div>
+              <div class="time monthly">
+                <p>103hrs</p>
+                <small>Last Month - 128hrs</small>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="icon icon-play box">
+              <img src="./img/icon-play.svg" alt="" class="box-icon" />
+            </div>
+            <div class="box bg-dark report">
+              <p class="title">Play</p>
+              <div class="circles">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+              </div>
+              <div class="time daily">
+                <p>1hr</p>
+                <small>Yesterday - 2hrs</small>
+              </div>
+              <div class="time weekly show">
+                <p>10hrs</p>
+                <small>Last Week - 8hrs</small>
+              </div>
+              <div class="time monthly">
+                <p>23hrs</p>
+                <small>Last Month - 29hrs</small>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="icon icon-study box">
+              <img src="./img/icon-study.svg" alt="" class="box-icon" />
+            </div>
+            <div class="box bg-dark report">
+              <p class="title">Study</p>
+              <div class="circles">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+              </div>
+              <div class="time daily">
+                <p>0hr</p>
+                <small>Yesterday - 1hr</small>
+              </div>
+              <div class="time weekly show">
+                <p>4hrs</p>
+                <small>Last Week - 7hrs</small>
+              </div>
+              <div class="time monthly">
+                <p>13hrs</p>
+                <small>Last Month - 19hrs</small>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="icon icon-exercise box">
+              <img src="./img/icon-exercise.svg" alt="" class="box-icon" />
+            </div>
+            <div class="box bg-dark report">
+              <p class="title">Exercise</p>
+              <div class="circles">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+              </div>
+              <div class="time daily">
+                <p>1hr</p>
+                <small>Yesterday - 1hr</small>
+              </div>
+              <div class="time weekly show">
+                <p>4hrs</p>
+                <small>Last Week - 5hrs</small>
+              </div>
+              <div class="time monthly">
+                <p>11hrs</p>
+                <small>Last Month - 18hrs</small>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="icon icon-social box">
+              <img src="./img/icon-social.svg" alt="" class="box-icon" />
+            </div>
+            <div class="box bg-dark report">
+              <p class="title">Social</p>
+              <div class="circles">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+              </div>
+              <div class="time daily">
+                <p>1hr</p>
+                <small>Yesterday - 3hrs</small>
+              </div>
+              <div class="time weekly show">
+                <p>5hrs</p>
+                <small>Last Week - 10hrs</small>
+              </div>
+              <div class="time monthly">
+                <p>21hrs</p>
+                <small>Last Month - 23hrs</small>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="icon icon-self-care box">
+              <img src="./img/icon-self-care.svg" alt="" class="box-icon" />
+            </div>
+            <div class="box bg-dark report">
+              <p class="title">Social</p>
+              <div class="circles">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+              </div>
+              <div class="time daily">
+                <p>0hr</p>
+                <small>Yesterday - 1hrs</small>
+              </div>
+              <div class="time weekly show">
+                <p>2hrs</p>
+                <small>Last Week - 2hrs</small>
+              </div>
+              <div class="time monthly">
+                <p>7hrs</p>
+                <small>Last Month - 11hrs</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
