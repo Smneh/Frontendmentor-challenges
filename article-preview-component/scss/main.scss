@@ -1,0 +1,169 @@
+@import 'config';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+//--General Styling--//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope';
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  background-color: $light-grayish-blue;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 40px;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: #fff;
+  width: 840px;
+  height: 330px;
+  border-radius: 10px;
+  position: relative;
+
+  .share-btn {
+    cursor: pointer;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 18px;
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  .share-btn.dark {
+    background-color: $desaturated-dark-blue;
+    color: #fff;
+  }
+
+  &-img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 40%;
+    height: 330px;
+    background: url('../img/drawers.jpg') no-repeat left center/cover;
+  }
+
+  &-info {
+    width: 60%;
+    padding: 40px;
+
+    p {
+      &:nth-of-type(1) {
+        color: $very-dark-grayish-blue;
+        font-weight: 700;
+        font-size: 23px;
+        margin-bottom: 12px;
+      }
+
+      &:nth-of-type(2) {
+        color: $very-dark-grayish-blue;
+        opacity: 0.83;
+        font-weight: 500;
+        font-size: 15px;
+        word-spacing: 0.5px;
+        margin-bottom: 28px;
+      }
+    }
+
+    .author {
+      justify-content: flex-start;
+      img {
+        margin-right: 16px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      h4 {
+        color: $very-dark-grayish-blue;
+      }
+      small {
+        color: $desaturated-dark-blue;
+        opacity: 0.7;
+        font-weight: 500;
+      }
+    }
+
+    .share-btn {
+      position: absolute;
+      right: 40px;
+      bottom: 48px;
+      color: $desaturated-dark-blue;
+    }
+  }
+}
+
+.social-links {
+  display: none;
+}
+
+.social-links.show {
+  display: flex;
+  background-color: $very-dark-grayish-blue;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 115px;
+  right: -76px;
+  width: 270px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px $grayish-blue;
+
+  small {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $grayish-blue;
+    font-weight: 500;
+  }
+
+  i {
+    cursor: pointer;
+    margin: 0 16px;
+    font-size: 22px;
+
+    &:hover {
+      color: $grayish-blue;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -30%;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid $very-dark-grayish-blue;
+  }
+
+  .share-btn {
+    display: none;
+    i {
+      margin: 0;
+    }
+  }
+}
+
+@import 'media';

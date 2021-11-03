@@ -1,0 +1,148 @@
+@import 'config';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@200;400;600&display=swap');
+//--General Styling--//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 160px;
+}
+
+.main-context {
+  @include flex-box(row-reverse, center, center, nowrap);
+  width: 100%;
+  position: relative;
+}
+
+.hero {
+  width: 35%;
+  height: 800px;
+  background: url('../img/hero-desktop.jpg') no-repeat center center/cover;
+}
+
+.detail {
+  width: 65%;
+  padding-left: 160px;
+
+  h1 {
+    font-size: 44px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    line-height: 1.1;
+    color: $dark-grayish-red;
+
+    span {
+      color: $desaturated-red;
+      font-weight: 200;
+    }
+  }
+
+  .long {
+    margin-top: 16px;
+    color: $desaturated-red;
+    width: 50%;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  form {
+    @include flex-box(row, flex-start, center, nowrap);
+    margin-top: 32px;
+    position: relative;
+
+    input {
+      font-family: inherit;
+      width: 380px;
+      height: 54px;
+      padding: 0 28px;
+      font-size: 16px;
+      border: 1px solid #cfcfcf;
+      border-radius: 30px;
+
+      &::placeholder {
+        color: #cfcfcf;
+      }
+
+      &:invalid,
+      &:focus {
+        outline: none;
+        border: 2px solid $soft-red;
+      }
+    }
+
+    .error-icon {
+      visibility: hidden;
+      margin-left: -95px;
+      margin-right: 8px;
+    }
+
+    button {
+      cursor: pointer;
+      width: 90px;
+      height: 54px;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 0px 15px 25px -10px $desaturated-red;
+      background: linear-gradient(
+        135deg,
+        rgba(248, 191, 191, 1) 0%,
+        rgba(238, 140, 140, 1) 100%
+      );
+
+      &:hover,
+      &:active {
+        box-shadow: 0px 15px 35px -5px $desaturated-red;
+        background: linear-gradient(
+          135deg,
+          rgb(255, 214, 214) 0%,
+          rgb(248, 185, 185) 100%
+        );
+      }
+    }
+  }
+
+  .error-text {
+    color: $soft-red;
+    margin: 12px 0 0 28px;
+    font-size: 14px;
+  }
+}
+
+.main-context::before {
+  position: absolute;
+  content: '';
+  width: 65%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background: url('../img/bg-pattern-desktop.svg') no-repeat center center/cover;
+}
+
+@import 'media';

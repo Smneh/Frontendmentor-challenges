@@ -1,0 +1,32 @@
+@media (max-height: 400px) {
+  body {
+    height: auto;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-container::before {
+    content: url('../img/bg-pattern-top.svg');
+    left: -500px;
+  }
+
+  .card-container::after {
+    content: url('../img/bg-pattern-bottom.svg');
+    bottom: -500px;
+    right: -500px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card-container::before {
+    content: url('../img/bg-pattern-top.svg');
+    left: -700px;
+  }
+
+  .card-container::after {
+    content: url('../img/bg-pattern-bottom.svg');
+    bottom: -600px;
+    right: -700px;
+  }
+}

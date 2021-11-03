@@ -1,0 +1,22 @@
+{
+  "name": "huddle-landing-page-with-single-introductory-section",
+  "version": "1.0.0",
+  "description": "huddle landing page with single introductory section",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smneh/frontendmentor-huddle-landing-page-with-single-introductory-section.git"
+  },
+  "author": "Smneh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smneh/frontendmentor-huddle-landing-page-with-single-introductory-section/issues"
+  },
+  "homepage": "https://github.com/Smneh/frontendmentor-huddle-landing-page-with-single-introductory-section#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

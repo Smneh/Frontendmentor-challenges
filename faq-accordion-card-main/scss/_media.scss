@@ -1,0 +1,79 @@
+@media (max-width: 950px) {
+  .icon {
+    width: 58%;
+  }
+  .faqs-container {
+    width: 42%;
+    padding: 3rem 2rem 3rem 0;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    height: unset;
+  }
+
+  .container {
+    height: 100vh;
+    overflow: scroll;
+    align-items: flex-start;
+  }
+
+  .box {
+    max-width: 500px;
+    height: max-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 200px 16px 16px 16px;
+  }
+
+  .icon {
+    width: 100%;
+    height: 100px;
+    &-main {
+      overflow: visible;
+
+      .shapes {
+        width: 240px;
+        height: 100px;
+        transform: translate(-50%, -50%);
+        background: url(../img/bg-pattern-mobile.svg) no-repeat;
+        background-position: center;
+        background-size: contain;
+        left: 50%;
+        top: 20%;
+      }
+
+      .woman {
+        width: 260px;
+        height: 190px;
+        transform: translate(-50%, -50%);
+        background: url(../img/illustration-woman-online-mobile.svg) no-repeat;
+        background-position: center;
+        background-size: contain;
+        left: 47%;
+        top: -35%;
+      }
+    }
+
+    .red-box {
+      display: none;
+    }
+  }
+
+  .faqs-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 2rem 2rem 2rem;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-height: 520px) {
+  body {
+    height: unset;
+  }
+}

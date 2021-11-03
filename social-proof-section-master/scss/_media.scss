@@ -1,0 +1,144 @@
+@media (max-width: 1000px) {
+  .detail {
+    &-header {
+      width: 50%;
+      p {
+        margin-top: 20px;
+      }
+    }
+
+    &-ratings {
+      margin-left: 32px;
+      width: 50%;
+      .rating {
+        width: 100%;
+        flex-direction: column;
+
+        &-stars {
+          margin: 0 0 8px 0;
+        }
+        &-1,
+        &-2 {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .testimonials-container {
+    .testimonial {
+      padding: 12px 24px;
+      height: 300px;
+      justify-content: flex-start;
+      &-2,
+      &-3 {
+        margin-top: 0;
+      }
+
+      &-user {
+        margin: 28px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+  .detail {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-header {
+      width: 100%;
+      text-align: center;
+      h1 {
+        font-size: 27px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &-ratings {
+      margin-left: 0;
+      margin-top: 32px;
+      width: 100%;
+    }
+  }
+
+  .testimonials-container {
+    flex-direction: column;
+
+    .testimonial {
+      width: 100%;
+      height: max-content;
+      margin-bottom: 24px;
+      padding: 32px;
+
+      &-user {
+        margin: 0 0 32px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 532px) {
+  .container::before {
+    content: url('../img/bg-pattern-top-mobile.svg');
+    width: 100%;
+    min-width: 375px;
+    height: 250px;
+  }
+
+  .container::after {
+    content: url('../img/bg-pattern-bottom-mobile.svg');
+    width: 100%;
+    min-width: 375px;
+    height: 500px;
+    bottom: 0;
+  }
+
+  .detail {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &-header {
+      width: 100%;
+      text-align: center;
+      h1 {
+        font-size: 27px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &-ratings {
+      margin-left: 0;
+      margin-top: 32px;
+      width: 100%;
+    }
+  }
+
+  .testimonials-container {
+    flex-direction: column;
+
+    .testimonial {
+      width: 100%;
+      height: max-content;
+      margin-bottom: 24px;
+      padding: 32px;
+
+      &-user {
+        margin: 0 0 32px 0;
+      }
+    }
+  }
+}

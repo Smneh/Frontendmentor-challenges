@@ -1,0 +1,22 @@
+{
+  "name": "base-apparel-coming-soon",
+  "version": "1.0.0",
+  "description": "base-apparel-coming-soon",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smneh/frontendmentor-base-apparel-coming-soon.git"
+  },
+  "author": "Smneh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smneh/frontendmentor-base-apparel-coming-soon/issues"
+  },
+  "homepage": "https://github.com/Smneh/frontendmentor-base-apparel-coming-soon#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

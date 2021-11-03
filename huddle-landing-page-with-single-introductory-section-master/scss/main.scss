@@ -1,0 +1,114 @@
+@import 'config';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+//--General Styling--//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  font-family: 'Poppins';
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-container {
+  max-height: 800px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: url(../img/bg-desktop.svg) $violet no-repeat left top;
+}
+
+.container {
+  margin: 0 64px;
+}
+
+.logo {
+  margin: 40px 0;
+  width: 230px;
+}
+
+.main-container {
+  @include flex-box(row, flex-start, flex-start, nowrap);
+  gap: 64px;
+
+  img {
+    width: 50%;
+    background: url(../img/illustration-mockups.svg) no-repeat center
+      center/cover;
+  }
+
+  .main-context {
+    width: 50%;
+    margin-top: 40px;
+
+    .title {
+      font-family: 'Poppins';
+      font-size: 48px;
+    }
+
+    .paragraph {
+      font-family: 'Open Sans';
+      line-height: 1.8;
+      font-size: 16px;
+      width: 80%;
+    }
+
+    .register-btn {
+      cursor: pointer;
+      margin-top: 20px;
+      width: 200px;
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      color: $violet;
+      font-size: 18px;
+      font-family: inherit;
+      transition: all 0.2s ease-in;
+      box-shadow: 0px 1px 12px 3px rgba(0, 0, 0, 0.35);
+
+      &:hover {
+        background-color: $soft-magenta;
+        color: #fff;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 20px 0;
+  .social-links {
+    @include flex-box(row, flex-end, center, nowrap);
+    list-style-type: none;
+
+    li {
+      @include flex-box(row, center, center, nowrap);
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      font-size: 16px;
+      margin-left: 16px;
+      border: 1px solid #fff;
+      transition: all 0.2s ease-in;
+
+      i {
+        transition: all 0.2s ease-in;
+      }
+
+      &:hover {
+        border: 1px solid $soft-magenta;
+
+        i {
+          color: $soft-magenta;
+        }
+      }
+    }
+  }
+}
+
+@import 'media';

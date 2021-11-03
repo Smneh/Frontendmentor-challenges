@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.grid-container {
+  display: grid; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Manrope';
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  background-color: #ecf2f8; }
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.container {
+  width: 100%;
+  padding: 40px;
+  max-width: 1200px; }
+
+.card {
+  background-color: #fff;
+  width: 840px;
+  height: 330px;
+  border-radius: 10px;
+  position: relative; }
+  .card .share-btn {
+    cursor: pointer;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 18px; }
+    .card .share-btn i {
+      font-size: 18px; }
+  .card .share-btn.dark {
+    background-color: #6d7f97;
+    color: #fff; }
+  .card-img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 40%;
+    height: 330px;
+    background: url("../img/drawers.jpg") no-repeat left center/cover; }
+  .card-info {
+    width: 60%;
+    padding: 40px; }
+    .card-info p:nth-of-type(1) {
+      color: #48556a;
+      font-weight: 700;
+      font-size: 23px;
+      margin-bottom: 12px; }
+    .card-info p:nth-of-type(2) {
+      color: #48556a;
+      opacity: 0.83;
+      font-weight: 500;
+      font-size: 15px;
+      word-spacing: 0.5px;
+      margin-bottom: 28px; }
+    .card-info .author {
+      justify-content: flex-start; }
+      .card-info .author img {
+        margin-right: 16px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; }
+      .card-info .author h4 {
+        color: #48556a; }
+      .card-info .author small {
+        color: #6d7f97;
+        opacity: 0.7;
+        font-weight: 500; }
+    .card-info .share-btn {
+      position: absolute;
+      right: 40px;
+      bottom: 48px;
+      color: #6d7f97; }
+
+.social-links {
+  display: none; }
+
+.social-links.show {
+  display: flex;
+  background-color: #48556a;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 115px;
+  right: -76px;
+  width: 270px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px #9eafc2; }
+  .social-links.show small {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #9eafc2;
+    font-weight: 500; }
+  .social-links.show i {
+    cursor: pointer;
+    margin: 0 16px;
+    font-size: 22px; }
+    .social-links.show i:hover {
+      color: #9eafc2; }
+  .social-links.show::after {
+    position: absolute;
+    content: '';
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -30%;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #48556a; }
+  .social-links.show .share-btn {
+    display: none; }
+    .social-links.show .share-btn i {
+      margin: 0; }
+
+@media (max-width: 1024px) {
+  .social-links.show {
+    padding: 16px;
+    bottom: 102px;
+    right: -33px;
+    width: 180px; }
+    .social-links.show small {
+      font-size: 11px;
+      letter-spacing: 3px; }
+    .social-links.show i {
+      font-size: 17px;
+      margin: 0 8px; } }
+
+@media (max-width: 815px) {
+  .container {
+    padding: 64px 24px;
+    width: 100%;
+    max-width: 500px; }
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    overflow: hidden; }
+    .card .share-btn {
+      right: 32px;
+      bottom: 26px;
+      font-size: 16px; }
+    .card-img {
+      border-radius: 0;
+      width: 100%;
+      height: 230px;
+      background: url("../img/drawers.jpg") no-repeat center center/cover; }
+    .card-info {
+      width: 100%;
+      padding: 40px 32px 20px 32px; }
+      .card-info p:nth-of-type(1) {
+        font-size: 20px; }
+  .social-links.show {
+    justify-content: flex-start;
+    padding: 28px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none; }
+    .social-links.show small {
+      letter-spacing: 4px;
+      font-size: 14px; }
+    .social-links.show i {
+      font-size: 26px;
+      margin: 0 16px; }
+    .social-links.show::after {
+      display: none; }
+    .social-links.show .share-btn {
+      display: inline-block;
+      position: absolute; }
+      .social-links.show .share-btn i {
+        font-size: 16px; } }
+
+@media (max-width: 500px) {
+  .card .share-btn {
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px; }
+  .card-info p:nth-of-type(1) {
+    font-size: 15px; }
+  .card-info p:nth-of-type(2) {
+    font-size: 13px; }
+  .card-info .author img {
+    margin-right: 12px;
+    width: 40px;
+    height: 40px; }
+  .card-info .author h4 {
+    font-size: 12px; }
+  .card-info .author small {
+    font-size: 11px; }
+  .social-links.show {
+    padding: 24px 28px; }
+    .social-links.show small {
+      font-size: 12px; }
+    .social-links.show i {
+      font-size: 20px;
+      margin: 0 8px; } }
+
+@media screen and (max-height: 372px) and (min-width: 815px), (max-height: 675px) and (min-width: 500px) and (max-width: 815px), (max-height: 690px) and (max-width: 500px) {
+  body {
+    height: unset; } }

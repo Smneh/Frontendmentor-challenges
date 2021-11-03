@@ -1,0 +1,83 @@
+@media (max-width: 1200px) {
+  .container {
+    padding: 104px 60px;
+  }
+
+  .title {
+    width: 50%;
+    h1 {
+      font-size: 44px;
+    }
+
+    p {
+      font-size: 13px;
+      font-weight: 500;
+      width: 90%;
+    }
+  }
+
+  .sign-up {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 64px 20px;
+    flex-direction: column;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+    p {
+      margin-bottom: 48px;
+      width: 100%;
+    }
+  }
+
+  .sign-up {
+    width: 100%;
+
+    &-offer {
+      padding: 16px 64px;
+    }
+
+    &-form {
+      padding: 20px;
+
+      .inputs {
+        @include flex-box(column, center, flex-start, nowrap);
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    h1 {
+      font-size: 32px;
+    }
+  }
+
+  .sign-up {
+    &-form {
+      button {
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 720px) and (min-width: 1200px),
+  (max-height: 740px) and (min-width: 900px) and (max-width: 1200px),
+  (max-height: 865px) and (min-width: 450px) and (max-width: 900px),
+  (max-width: 450px) {
+  body {
+    overflow-y: auto;
+  }
+}

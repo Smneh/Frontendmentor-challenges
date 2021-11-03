@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.grid-container {
+  display: grid; }
+
+.p-1 {
+  padding: 1rem; }
+
+.p-2 {
+  padding: 2rem; }
+
+.p-3 {
+  padding: 3rem; }
+
+.p-4 {
+  padding: 4rem; }
+
+.m-1 {
+  margin: 1rem; }
+
+.m-2 {
+  margin: 2rem; }
+
+.m-3 {
+  margin: 3rem; }
+
+.m-4 {
+  margin: 4rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Kumbh Sans';
+  height: 100vh;
+  overflow: auto; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #af67e9 50%, #6565e7 100%); }
+
+.box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 1rem 1rem 1rem 3rem;
+  height: 500px;
+  border-radius: 20px;
+  background-color: #fff; }
+
+.icon {
+  width: 50%;
+  height: 100%;
+  position: relative; }
+  .icon-main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; }
+    .icon-main .shapes {
+      width: 950px;
+      height: 950px;
+      position: absolute;
+      background: url(../img/bg-pattern-desktop.svg) no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: -550px;
+      top: -300px; }
+    .icon-main .woman {
+      width: 470px;
+      height: 360px;
+      position: absolute;
+      background: url(../img/illustration-woman-online-desktop.svg) no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: -70px;
+      top: 60px; }
+  .icon .red-box {
+    width: 190px;
+    height: 180px;
+    position: absolute;
+    background: url(../img/illustration-box-desktop.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: -92px;
+    top: 205px; }
+
+.faqs-container {
+  width: 50%;
+  padding: 3rem 6rem 3rem 0; }
+  .faqs-container h1 {
+    margin-bottom: 1rem; }
+  .faqs-container .faq {
+    position: relative;
+    padding: 1rem 0;
+    border-bottom: 2px #e7e7e9 solid; }
+    .faqs-container .faq .question {
+      width: 85%;
+      color: #4a4b5e;
+      cursor: pointer; }
+      .faqs-container .faq .question:hover {
+        color: #f47c57; }
+    .faqs-container .faq .answer {
+      display: none; }
+    .faqs-container .faq .arrow-icon {
+      padding: 1rem;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 10%;
+      transition: transform 0.5s ease; }
+  .faqs-container .faq.active .question {
+    font-weight: 700;
+    color: #000; }
+  .faqs-container .faq.active .answer {
+    font-size: 14px;
+    margin-top: 0.5rem;
+    display: block;
+    color: #787887; }
+  .faqs-container .faq.active .arrow-icon {
+    transform: rotateX(180deg);
+    top: 5%; }
+
+@media (max-width: 950px) {
+  .icon {
+    width: 58%; }
+  .faqs-container {
+    width: 42%;
+    padding: 3rem 2rem 3rem 0; } }
+
+@media (max-width: 800px) {
+  body {
+    height: unset; }
+  .container {
+    height: 100vh;
+    overflow: scroll;
+    align-items: flex-start; }
+  .box {
+    max-width: 500px;
+    height: max-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 200px 16px 16px 16px; }
+  .icon {
+    width: 100%;
+    height: 100px; }
+    .icon-main {
+      overflow: visible; }
+      .icon-main .shapes {
+        width: 240px;
+        height: 100px;
+        transform: translate(-50%, -50%);
+        background: url(../img/bg-pattern-mobile.svg) no-repeat;
+        background-position: center;
+        background-size: contain;
+        left: 50%;
+        top: 20%; }
+      .icon-main .woman {
+        width: 260px;
+        height: 190px;
+        transform: translate(-50%, -50%);
+        background: url(../img/illustration-woman-online-mobile.svg) no-repeat;
+        background-position: center;
+        background-size: contain;
+        left: 47%;
+        top: -35%; }
+    .icon .red-box {
+      display: none; }
+  .faqs-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 2rem 2rem 2rem; }
+    .faqs-container h1 {
+      text-align: center; } }
+
+@media (max-height: 520px) {
+  body {
+    height: unset; } }

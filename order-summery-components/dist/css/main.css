@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap");
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.grid-container {
+  display: grid; }
+
+.btn-blue, .btn-transparent {
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none; }
+
+.btn-blue {
+  background-color: #3829e0;
+  color: #fff;
+  box-shadow: 0px 5px 15px #7280a7; }
+  .btn-blue:hover {
+    opacity: 0.8; }
+
+.btn-transparent {
+  background-color: transparent;
+  opacity: 0.6; }
+  .btn-transparent:hover {
+    opacity: 1; }
+
+.p-1 {
+  padding: 1rem; }
+
+.p-2 {
+  padding: 2rem; }
+
+.p-3 {
+  padding: 3rem; }
+
+.p-4 {
+  padding: 4rem; }
+
+.m-1 {
+  margin: 1rem; }
+
+.m-2 {
+  margin: 2rem; }
+
+.m-3 {
+  margin: 3rem; }
+
+.m-4 {
+  margin: 4rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: url(../img/pattern-background-desktop.svg) no-repeat;
+  background-position: top left;
+  background-size: contain;
+  font-family: 'Red Hat Display';
+  height: 100vh;
+  overflow: auto; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -2;
+  overflow: hidden; }
+
+.container::before {
+  content: '';
+  background: #e0e8ff;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+.card {
+  height: 550px;
+  margin: 16px;
+  max-width: 360px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 10px 24px 5px #c3c3c3;
+  overflow: hidden; }
+  .card-header {
+    height: 180px;
+    width: 100%;
+    background: url("../img/illustration-hero.svg") no-repeat center center/cover; }
+  .card-info {
+    width: 100%;
+    height: max-content;
+    gap: 1rem;
+    text-align: center; }
+    .card-info-text {
+      font-size: 13.5px;
+      line-height: 1.25rem;
+      font-weight: 500;
+      opacity: 0.6; }
+    .card-info-details {
+      width: 100%;
+      background-color: #f5f7ff;
+      border-radius: 5px;
+      justify-content: flex-start; }
+      .card-info-details img {
+        width: 40px;
+        height: 40px; }
+      .card-info-details div {
+        margin-left: 1rem;
+        text-align: left; }
+        .card-info-details div small {
+          opacity: 0.6;
+          font-weight: 500;
+          font-size: 13px; }
+      .card-info-details a {
+        margin-left: auto;
+        font-weight: 700;
+        color: #3829e0;
+        font-size: 11.5px; }
+        .card-info-details a:hover {
+          opacity: 0.7;
+          text-decoration: none; }
+    .card-info button {
+      font-weight: 900;
+      font-size: 13px;
+      font-family: inherit; }
+
+@media (max-width: 400px) {
+  body {
+    background: url(../img/pattern-background-mobile.svg) no-repeat;
+    background-position: top left;
+    background-size: contain; } }
+
+@media (max-height: 582px) {
+  body {
+    height: unset; } }

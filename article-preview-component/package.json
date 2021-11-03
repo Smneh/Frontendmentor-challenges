@@ -1,0 +1,22 @@
+{
+  "name": "article-preview-component",
+  "version": "1.0.0",
+  "description": "article preview component",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smneh/frontendmentor-article-preview-component.git"
+  },
+  "author": "Smneh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smneh/frontendmentor-article-preview-component/issues"
+  },
+  "homepage": "https://github.com/Smneh/frontendmentor-article-preview-component#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

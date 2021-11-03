@@ -1,0 +1,13 @@
+@media (max-width: 400px) {
+  body {
+    background: $bg-mob-image no-repeat;
+    background-position: top left;
+    background-size: contain;
+  }
+}
+
+@media (max-height: 582px) {
+  body {
+    height: unset;
+  }
+}

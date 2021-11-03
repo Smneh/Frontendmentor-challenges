@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Karla';
+  height: 100vh;
+  font-size: 16px;
+  overflow: hidden; }
+
+main {
+  width: 100%;
+  max-width: 1600px;
+  height: 100%;
+  max-height: 800px;
+  margin: 0 auto;
+  background-color: #e5eff5; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%; }
+
+.card {
+  background-color: #fff;
+  width: 100%;
+  width: 600px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 80px 20px; }
+  .card-header {
+    padding: 32px; }
+    .card-header h2 {
+      color: #2ab2af; }
+    .card-header .p-1 {
+      margin: 20px 0;
+      color: #c0df34;
+      font-weight: 700; }
+    .card-header .p-2 {
+      color: #98a6bd;
+      line-height: 1.8;
+      font-size: 15px; }
+  .card-main-context {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap; }
+    .card-main-context .title {
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 400; }
+    .card-main-context .sign-up {
+      width: 50%;
+      height: 245px;
+      padding: 32px;
+      background-color: #2ab2af;
+      color: #fff; }
+      .card-main-context .sign-up .price {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: 8px; }
+        .card-main-context .sign-up .price h3 {
+          font-size: 30px;
+          margin-right: 12px; }
+        .card-main-context .sign-up .price small {
+          font-size: 15px;
+          opacity: 0.5;
+          font-weight: 400; }
+      .card-main-context .sign-up p:last-of-type {
+        font-weight: 300;
+        color: #e5eff5;
+        margin-bottom: 32px; }
+      .card-main-context .sign-up-btn {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        padding: 16px;
+        border-radius: 5px;
+        background-color: #c0df34;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        font-family: inherit;
+        box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.28);
+        transition: transform 0.2s ease-out; }
+        .card-main-context .sign-up-btn:active {
+          transform: scale(0.95); }
+        .card-main-context .sign-up-btn:hover {
+          opacity: 0.95; }
+    .card-main-context .why-us {
+      width: 50%;
+      height: 245px;
+      padding: 32px;
+      color: #fff;
+      background-color: #50bebc; }
+      .card-main-context .why-us .reasons {
+        line-height: 1.5;
+        font-size: 14px;
+        color: #e5eff5;
+        opacity: 0.9;
+        font-weight: 300; }
+
+@media (max-width: 664px) {
+  main {
+    max-height: 100%; }
+  .card {
+    width: 100%;
+    max-width: 330px; }
+    .card-header {
+      padding: 32px 12px 32px 24px; }
+    .card-main-context {
+      flex-direction: column; }
+      .card-main-context .sign-up,
+      .card-main-context .why-us {
+        width: 100%;
+        height: max-content; } }
+
+@media (max-height: 615px) {
+  body {
+    height: auto;
+    overflow: auto; } }

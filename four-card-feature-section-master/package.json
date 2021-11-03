@@ -1,0 +1,22 @@
+{
+  "name": "four-card-feature-section",
+  "version": "1.0.0",
+  "description": "four card feature section",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smneh/frontendmentor-four-card-feature-section.git"
+  },
+  "author": "Smneh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smneh/frontendmentor-four-card-feature-section/issues"
+  },
+  "homepage": "https://github.com/Smneh/frontendmentor-four-card-feature-section#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

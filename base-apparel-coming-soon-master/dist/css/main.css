@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+  overflow: hidden; }
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  overflow: hidden;
+  margin: 0 auto; }
+
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 160px; }
+
+.main-context {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative; }
+
+.hero {
+  width: 35%;
+  height: 800px;
+  background: url("../img/hero-desktop.jpg") no-repeat center center/cover; }
+
+.detail {
+  width: 65%;
+  padding-left: 160px; }
+  .detail h1 {
+    font-size: 44px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    line-height: 1.1;
+    color: #413a3a; }
+    .detail h1 span {
+      color: #ce9797;
+      font-weight: 200; }
+  .detail .long {
+    margin-top: 16px;
+    color: #ce9797;
+    width: 50%;
+    font-size: 15px;
+    line-height: 1.8; }
+  .detail form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 32px;
+    position: relative; }
+    .detail form input {
+      font-family: inherit;
+      width: 380px;
+      height: 54px;
+      padding: 0 28px;
+      font-size: 16px;
+      border: 1px solid #cfcfcf;
+      border-radius: 30px; }
+      .detail form input::placeholder {
+        color: #cfcfcf; }
+      .detail form input:invalid, .detail form input:focus {
+        outline: none;
+        border: 2px solid #f96262; }
+    .detail form .error-icon {
+      visibility: hidden;
+      margin-left: -95px;
+      margin-right: 8px; }
+    .detail form button {
+      cursor: pointer;
+      width: 90px;
+      height: 54px;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 0px 15px 25px -10px #ce9797;
+      background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%); }
+      .detail form button:hover, .detail form button:active {
+        box-shadow: 0px 15px 35px -5px #ce9797;
+        background: linear-gradient(135deg, #ffd6d6 0%, #f8b9b9 100%); }
+  .detail .error-text {
+    color: #f96262;
+    margin: 12px 0 0 28px;
+    font-size: 14px; }
+
+.main-context::before {
+  position: absolute;
+  content: '';
+  width: 65%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background: url("../img/bg-pattern-desktop.svg") no-repeat center center/cover; }
+
+@media (max-width: 1100px) {
+  .logo {
+    left: 80px; }
+  .hero {
+    width: 45%; }
+  .detail {
+    width: 55%;
+    padding-left: 80px; }
+    .detail .long {
+      width: 80%; }
+    .detail form input {
+      width: 320px;
+      height: 44px;
+      font-size: 14px;
+      padding: 0 16px; }
+    .detail form button {
+      width: 70px;
+      height: 44px; }
+    .detail .error-text {
+      margin: 12px 0 0 16px;
+      font-size: 12px; }
+  .main-context::before {
+    width: 55%; } }
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 600px; }
+  .logo {
+    position: unset;
+    top: 0;
+    left: 0;
+    margin: 32px; }
+  .main-context {
+    flex-direction: column; }
+  .hero {
+    width: 100%;
+    height: 400px;
+    background: url("../img/hero-desktop.jpg") no-repeat left top/cover; }
+  .detail {
+    width: 100%;
+    padding: 64px 32px; }
+    .detail h1 {
+      font-size: 36px;
+      text-align: center; }
+    .detail .long {
+      width: 100%;
+      font-size: 13px;
+      text-align: center; }
+    .detail form input {
+      width: 100%; }
+    .detail form .error-icon {
+      margin-left: -90px; }
+    .detail form button {
+      width: 60px; }
+  .main-context::before {
+    display: none; } }
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px; }
+  .hero {
+    height: 280px;
+    background: url("../img/hero-mobile.jpg") no-repeat left top/cover; } }
+
+@media screen and (max-height: 700px) and (min-width: 800px), (max-height: 900px) and (min-width: 480px) and (max-width: 800px), (max-height: 860px) and (max-width: 480px) {
+  body {
+    overflow: auto; } }

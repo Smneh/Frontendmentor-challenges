@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff; }
+
+body {
+  font-family: 'Poppins';
+  width: 100vw;
+  height: 100vh; }
+
+.bg-container {
+  max-height: 800px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: url(../img/bg-desktop.svg) #674baf no-repeat left top; }
+
+.container {
+  margin: 0 64px; }
+
+.logo {
+  margin: 40px 0;
+  width: 230px; }
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 64px; }
+  .main-container img {
+    width: 50%;
+    background: url(../img/illustration-mockups.svg) no-repeat center center/cover; }
+  .main-container .main-context {
+    width: 50%;
+    margin-top: 40px; }
+    .main-container .main-context .title {
+      font-family: 'Poppins';
+      font-size: 48px; }
+    .main-container .main-context .paragraph {
+      font-family: 'Open Sans';
+      line-height: 1.8;
+      font-size: 16px;
+      width: 80%; }
+    .main-container .main-context .register-btn {
+      cursor: pointer;
+      margin-top: 20px;
+      width: 200px;
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      color: #674baf;
+      font-size: 18px;
+      font-family: inherit;
+      transition: all 0.2s ease-in;
+      box-shadow: 0px 1px 12px 3px rgba(0, 0, 0, 0.35); }
+      .main-container .main-context .register-btn:hover {
+        background-color: #e882e8;
+        color: #fff; }
+
+footer {
+  padding: 20px 0; }
+  footer .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style-type: none; }
+    footer .social-links li {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      font-size: 16px;
+      margin-left: 16px;
+      border: 1px solid #fff;
+      transition: all 0.2s ease-in; }
+      footer .social-links li i {
+        transition: all 0.2s ease-in; }
+      footer .social-links li:hover {
+        border: 1px solid #e882e8; }
+        footer .social-links li:hover i {
+          color: #e882e8; }
+
+@media (max-width: 1300px) {
+  .main-container {
+    gap: 32px; }
+    .main-container img {
+      width: 60%; }
+    .main-container .main-context {
+      width: 40%;
+      margin-top: 24px; }
+      .main-container .main-context .title {
+        font-size: 40px; }
+      .main-container .main-context .paragraph {
+        font-size: 15px;
+        width: 90%; }
+      .main-container .main-context .register-btn {
+        width: 180px;
+        font-size: 16px; } }
+
+@media (max-width: 1000px) {
+  .bg-container {
+    max-height: unset;
+    background: url(../img/bg-mobile.svg) #674baf no-repeat top left/cover; }
+  .container {
+    max-width: 600px;
+    margin: 0 auto; }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0; }
+    .main-container img {
+      width: 100%; }
+    .main-container .main-context {
+      width: 100%;
+      margin-top: 40px;
+      text-align: center; }
+      .main-container .main-context .paragraph {
+        margin-top: 16px;
+        width: 100%; }
+      .main-container .main-context .register-btn {
+        margin-top: 32px;
+        width: 250px; }
+  footer {
+    padding: 64px 0 40px 0; }
+    footer .social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap; } }
+
+@media (max-width: 632px) {
+  .container {
+    margin: 0 32px; } }
+
+@media (max-width: 500px) {
+  .logo {
+    width: 130px;
+    margin: 28px 0; }
+  .main-container .main-context .title {
+    font-size: 28px; }
+  .main-container .main-context .paragraph {
+    font-size: 14px; }
+  .main-container .main-context .register-btn {
+    width: 230px; } }
+
+@media (max-width: 375px) {
+  .bg-container {
+    background: url(../img/bg-mobile.svg) #674baf no-repeat top left; }
+  .main-container .main-context .title {
+    font-size: 22px; }
+  .main-container .main-context .paragraph {
+    font-size: 13px; }
+  .main-container .main-context .register-btn {
+    width: 200px; } }
+
+@media (max-height: 720px) {
+  body {
+    height: auto; } }
