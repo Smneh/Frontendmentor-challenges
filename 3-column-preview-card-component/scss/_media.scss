@@ -1,0 +1,26 @@
+@media (max-width: 770px) {
+  body {
+    height: unset;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    max-width: 480px;
+  }
+
+  .card {
+    width: 100%;
+    height: max-content;
+    padding: 2rem;
+
+    &-btn {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  body {
+    height: unset;
+  }
+}

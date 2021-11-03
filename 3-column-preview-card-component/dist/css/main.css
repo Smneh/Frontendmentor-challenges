@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+a {
+  text-decoration: none; }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.grid-container {
+  display: grid; }
+
+.btn {
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+  padding: 0.8rem 0.2rem;
+  display: inline-block;
+  background-color: #f2f2f2; }
+
+.p-1 {
+  padding: 1rem; }
+
+.p-2 {
+  padding: 2rem; }
+
+.p-3 {
+  padding: 3rem; }
+
+.p-4 {
+  padding: 4rem; }
+
+.m-1 {
+  margin: 1rem; }
+
+.m-2 {
+  margin: 2rem; }
+
+.m-3 {
+  margin: 3rem; }
+
+.m-4 {
+  margin: 4rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lexend Deca';
+  height: 100vh;
+  overflow: auto; }
+
+.cards-container {
+  margin: 16px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  width: 300px;
+  height: 500px;
+  padding: 3rem; }
+  .card-1 {
+    background-color: #e38826; }
+    .card-1 .btn {
+      color: #e38826; }
+  .card-2 {
+    background-color: #006970; }
+    .card-2 .btn {
+      color: #006970; }
+  .card-3 {
+    background-color: #004241; }
+    .card-3 .btn {
+      color: #004241; }
+  .card h2 {
+    color: #f2f2f2;
+    font-family: 'Big Shoulders Display';
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 1rem 0; }
+  .card-text {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+    font-size: 14px;
+    word-spacing: 1.5px; }
+  .card-btn {
+    font-size: 14px;
+    width: 150px;
+    border: 3px solid #f2f2f2;
+    transition: transform 0.2s ease; }
+    .card-btn:hover, .card-btn:active {
+      background-color: inherit;
+      color: #f2f2f2; }
+    .card-btn:active {
+      transform: scale(0.98); }
+
+@media (max-width: 770px) {
+  body {
+    height: unset; }
+  .cards-container {
+    flex-direction: column;
+    max-width: 480px; }
+  .card {
+    width: 100%;
+    height: max-content;
+    padding: 2rem; }
+    .card-btn {
+      margin-top: 32px; } }
+
+@media (max-height: 500px) {
+  body {
+    height: unset; } }
