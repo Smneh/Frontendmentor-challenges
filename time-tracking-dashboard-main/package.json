@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smneh/frontendmentor-time-tracking-dashboard-main.git"
+    "url": "git+https://github.com/Smneh/Frontendmentor-challenges/tree/main/time-tracking-dashboard-main.git"
   },
   "author": "Smneh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Smneh/frontendmentor-time-tracking-dashboard-main/issues"
+    "url": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/time-tracking-dashboard-main/issues"
   },
-  "homepage": "https://github.com/Smneh/frontendmentor-time-tracking-dashboard-main#readme",
+  "homepage": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/time-tracking-dashboard-main#readme",
   "devDependencies": {
     "node-sass": "^6.0.1"
   }

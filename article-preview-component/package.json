@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smneh/frontendmentor-article-preview-component.git"
+    "url": "git+https://github.com/Smneh/Frontendmentor-challenges/tree/main/article-preview-component.git"
   },
   "author": "Smneh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Smneh/frontendmentor-article-preview-component/issues"
+    "url": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/article-preview-component/issues"
   },
-  "homepage": "https://github.com/Smneh/frontendmentor-article-preview-component#readme",
+  "homepage": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/article-preview-component#readme",
   "devDependencies": {
     "node-sass": "^6.0.1"
   }

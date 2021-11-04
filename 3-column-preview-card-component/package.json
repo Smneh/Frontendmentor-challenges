@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smneh/frontendmentor-3-column-preview-card-component.git"
+    "url": "git+https://github.com/Smneh/Frontendmentor-challenges/tree/main/3-column-preview-card-componentt.git"
   },
   "author": "Smneh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Smneh/frontendmentor-3-column-preview-card-component/issues"
+    "url": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/3-column-preview-card-componentt/issues"
   },
-  "homepage": "https://github.com/Smneh/frontendmentor-3-column-preview-card-component#readme",
+  "homepage": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/3-column-preview-card-componentt#readme",
   "devDependencies": {
     "node-sass": "^6.0.1"
   }
