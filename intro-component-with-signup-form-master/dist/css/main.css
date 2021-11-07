@@ -7,15 +7,22 @@
 body {
   font-family: 'Poppins';
   font-size: 16px;
+  height: 100vh;
   overflow: hidden; }
 
 main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   position: relative;
   width: 100%;
-  max-width: 1600px;
-  min-height: 750px;
+  height: 100%;
+  max-height: 740px;
   margin: 0 auto;
-  z-index: 1; }
+  z-index: 1;
+  overflow: hidden; }
 
 main::before {
   content: '';
@@ -34,7 +41,9 @@ main::before {
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
-  padding: 88px 132px; }
+  max-width: 1220px;
+  padding: 32px;
+  overflow: hidden; }
 
 .title {
   width: 60%;
@@ -57,6 +66,7 @@ main::before {
   flex-wrap: nowrap;
   width: 40%; }
   .sign-up-offer {
+    cursor: pointer;
     width: 100%;
     background-color: #6055a5;
     padding: 16px;
@@ -68,6 +78,8 @@ main::before {
     box-shadow: 0px 10px 2px -2px rgba(0, 0, 0, 0.2); }
     .sign-up-offer span {
       font-weight: 500; }
+    .sign-up-offer:hover {
+      background-color: #756cac; }
   .sign-up-form {
     display: flex;
     flex-direction: column;
@@ -90,24 +102,30 @@ main::before {
       .sign-up-form .inputs .input-container {
         width: 100%;
         position: relative; }
-        .sign-up-form .inputs .input-container input {
+        .sign-up-form .inputs .input-container .input {
           width: 100%;
-          margin: 16px 0 4px 0;
-          padding: 12px 24px;
+          margin: 12px 0 4px 0;
           border-radius: 5px;
-          font-family: inherit;
           font-size: 12px;
           font-weight: 600;
           border: 1px solid #b9b6d3; }
-          .sign-up-form .inputs .input-container input:focus {
-            outline: none;
+          .sign-up-form .inputs .input-container .input:focus {
             border: 1px solid #6055a5; }
-          .sign-up-form .inputs .input-container input.invalid {
+          .sign-up-form .inputs .input-container .input.invalid {
             border: 2px solid #ff7a7a; }
-            .sign-up-form .inputs .input-container input.invalid::placeholder {
+            .sign-up-form .inputs .input-container .input.invalid input::placeholder {
               opacity: 0; }
-          .sign-up-form .inputs .input-container input[type='email'].invalid {
-            color: #ff7a7a; }
+          .sign-up-form .inputs .input-container .input input {
+            width: 92%;
+            height: 100%;
+            padding: 12px 16px;
+            border: none;
+            font-family: inherit;
+            border-radius: 5px; }
+            .sign-up-form .inputs .input-container .input input:focus {
+              outline: none; }
+            .sign-up-form .inputs .input-container .input input[type='email'].invalid {
+              color: #ff7a7a; }
         .sign-up-form .inputs .input-container img {
           display: none;
           position: absolute;
@@ -122,6 +140,7 @@ main::before {
           text-align: right;
           margin-bottom: 8px; }
     .sign-up-form button {
+      cursor: pointer;
       margin-top: 8px;
       width: 100%;
       background-color: #38cc8c;
@@ -134,7 +153,10 @@ main::before {
       border-radius: 5px;
       border: 1px solid #50aa83;
       box-shadow: inset 0px -4px 0px -1px #2ebd7f;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      transition: transform 0.2s ease-in-out; }
+      .sign-up-form button:hover {
+        background-color: #33e698; }
     .sign-up-form small {
       width: 90%;
       text-align: center;
@@ -147,8 +169,6 @@ main::before {
         font-weight: 600; }
 
 @media (max-width: 1200px) {
-  .container {
-    padding: 104px 60px; }
   .title {
     width: 50%; }
     .title h1 {
@@ -161,6 +181,8 @@ main::before {
     width: 50%; } }
 
 @media (max-width: 900px) {
+  main {
+    max-height: 865px; }
   .container {
     max-width: 500px;
     margin: 0 auto;
@@ -193,6 +215,9 @@ main::before {
     font-size: 13px;
     font-weight: 500; } }
 
-@media screen and (max-height: 720px) and (min-width: 1200px), (max-height: 740px) and (min-width: 900px) and (max-width: 1200px), (max-height: 865px) and (min-width: 450px) and (max-width: 900px), (max-width: 450px) {
+@media screen and (max-height: 575px) and (min-width: 1200px), (max-height: 575px) and (min-width: 900px) and (max-width: 1200px), (max-height: 865px) and (min-width: 450px) and (max-width: 900px), (max-width: 450px) {
   body {
-    overflow-y: auto; } }
+    height: auto;
+    overflow-y: auto; }
+  main {
+    max-height: unset; } }

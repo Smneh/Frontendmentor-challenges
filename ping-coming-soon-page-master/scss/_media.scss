@@ -1,10 +1,4 @@
 @media (max-width: 700px) {
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
   header {
     .logo {
       margin: 80px 0;
@@ -12,47 +6,54 @@
   }
 
   main {
-    .title {
-      font-size: 30px;
-      margin-bottom: 32px;
-    }
+    .main-context {
+      max-width: 400px;
+      padding: 0 16px;
 
-    .paragraph {
-      font-size: 16px;
-      margin-bottom: 52px;
-    }
-
-    .form {
-      @include flex-box(column, center, center, nowrap);
-      width: 100%;
-
-      .input,
-      button {
-        width: 100%;
-        margin: 0;
+      .title {
+        font-size: 30px;
+        margin-bottom: 32px;
       }
 
-      .input {
-        .error-text {
-          font-size: 13px;
-          margin: 8px 0 32px 0;
+      .paragraph {
+        font-size: 16px;
+        margin-bottom: 52px;
+      }
+
+      .form {
+        @include flex-box(column, center, center, nowrap);
+        width: 100%;
+
+        .input,
+        button {
+          width: 100%;
+          margin: 0;
+        }
+
+        .input {
+          .error-text {
+            font-size: 13px;
+            margin: 8px 0 32px 0;
+          }
         }
       }
-    }
 
-    .img-container {
-      margin: 52px 0 100px 0;
-      height: 280px;
+      .img-container {
+        margin: 52px 0 100px 0;
+        height: 280px;
+      }
     }
   }
 }
+
 @media (max-width: 410px) {
-  .container {
-    padding: 0 24px;
-  }
   main {
-    .img-container {
-      height: 200px;
+    .main-context {
+      text-align: center;
+
+      .img-container {
+        height: 200px;
+      }
     }
   }
 }

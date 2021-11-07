@@ -12,16 +12,19 @@
 body {
   font-family: 'Poppins';
   font-size: 16px;
+  height: 100vh;
   overflow: hidden;
 }
 
 main {
+  @include flex-box(row, center, center, nowrap);
   position: relative;
   width: 100%;
-  max-width: 1600px;
-  min-height: 750px;
+  height: 100%;
+  max-height: 740px;
   margin: 0 auto;
   z-index: 1;
+  overflow: hidden;
 }
 
 main::before {
@@ -39,7 +42,9 @@ main::before {
 .container {
   @include flex-box(row, flex-start, center, nowrap);
   width: 100%;
-  padding: 88px 132px;
+  max-width: 1220px;
+  padding: 32px;
+  overflow: hidden;
 }
 
 .title {
@@ -65,6 +70,7 @@ main::before {
   width: 40%;
 
   &-offer {
+    cursor: pointer;
     width: 100%;
     background-color: $blue;
     padding: 16px;
@@ -77,6 +83,10 @@ main::before {
 
     span {
       font-weight: 500;
+    }
+
+    &:hover {
+      background-color: hsl(248, 28%, 55%);
     }
   }
 
@@ -97,31 +107,43 @@ main::before {
         width: 100%;
         position: relative;
 
-        input {
+        .input {
           width: 100%;
-          margin: 16px 0 4px 0;
-          padding: 12px 24px;
+          margin: 12px 0 4px 0;
           border-radius: 5px;
-          font-family: inherit;
           font-size: 12px;
           font-weight: 600;
           border: 1px solid $grayish-blue;
 
           &:focus {
-            outline: none;
             border: 1px solid $blue;
           }
 
           &.invalid {
             border: 2px solid $red;
 
-            &::placeholder {
-              opacity: 0;
+            input {
+              &::placeholder {
+                opacity: 0;
+              }
             }
           }
 
-          &[type='email'].invalid {
-            color: $red;
+          input {
+            width: 92%;
+            height: 100%;
+            padding: 12px 16px;
+            border: none;
+            font-family: inherit;
+            border-radius: 5px;
+
+            &:focus {
+              outline: none;
+            }
+
+            &[type='email'].invalid {
+              color: $red;
+            }
           }
         }
 
@@ -145,6 +167,7 @@ main::before {
     }
 
     button {
+      cursor: pointer;
       margin-top: 8px;
       width: 100%;
       background-color: $green;
@@ -158,6 +181,11 @@ main::before {
       border: 1px solid hsl(154, 36%, 49%);
       box-shadow: inset 0px -4px 0px -1px hsl(154, 61%, 46%);
       text-transform: uppercase;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        background-color: hsl(154, 78%, 55%);
+      }
     }
 
     small {

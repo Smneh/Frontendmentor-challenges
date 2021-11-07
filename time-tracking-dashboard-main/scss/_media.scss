@@ -1,7 +1,6 @@
 @media (max-width: 1225px) {
   main {
-    height: unset;
-    padding: 100px 32px;
+    max-height: 800px;
   }
 
   .container {
@@ -16,17 +15,21 @@
 }
 
 @media (max-width: 860px) {
+  main {
+    max-height: unset;
+  }
+
   .container {
     flex-direction: column;
     align-items: center;
-  }
-
-  .box {
-    width: 400px;
+    width: 100%;
+    margin: 32px 16px;
   }
 
   .dashboard-info {
     height: unset;
+    width: 100%;
+    max-width: 400px;
 
     .user {
       @include flex-box(row, flex-start, center, wrap);
@@ -59,21 +62,23 @@
   }
 
   .reports-container {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 
-    .report {
-      .title {
-        font-size: 18px;
+    .report-box {
+      width: 100%;
+      max-width: 400px;
+
+      .report {
+        .title {
+          font-size: 18px;
+        }
       }
     }
   }
 }
 
 @media (max-width: 460px) {
-  .box {
-    width: 280px;
-  }
-
   .dashboard-info {
     .user {
       img {
@@ -102,38 +107,40 @@
   }
 
   .reports-container {
-    width: 280px;
-
-    .icon {
-      margin-bottom: -35px;
-    }
-
-    .report {
-      padding: 20px;
-
-      .title {
-        font-size: 13px;
-        margin-bottom: 8px;
+    .report-box {
+      .icon {
+        margin-bottom: -35px;
       }
 
-      .time {
-        &.show {
-          @include flex-box(row, space-between, center, wrap);
+      .report {
+        padding: 20px;
+
+        .title {
+          font-size: 13px;
+          margin-bottom: 8px;
         }
 
-        p {
-          font-size: 25px;
-          margin-bottom: 0;
+        .time {
+          &.show {
+            @include flex-box(row, space-between, center, wrap);
+          }
+
+          p {
+            font-size: 25px;
+            margin-bottom: 0;
+          }
         }
       }
     }
   }
 }
-@media screen and (max-height: 720px) and (min-width: 1225px),
+
+@media screen and (max-height: 535px) and (min-width: 1225px),
   (max-height: 800px) and (min-width: 860px) and (max-width: 1225px),
-  (max-height: 1800px) and (min-width: 460px) and (max-width: 860px),
+  (max-height: 1690px) and (min-width: 460px) and (max-width: 860px),
   (max-width: 460px) {
   body {
-    overflow: scroll;
+    height: auto;
+    overflow-y: auto;
   }
 }

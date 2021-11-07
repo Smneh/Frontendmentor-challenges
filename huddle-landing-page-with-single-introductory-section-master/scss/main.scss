@@ -13,67 +13,81 @@ body {
   font-family: 'Poppins';
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
-.bg-container {
-  max-height: 800px;
+.context-wrapper {
+  @include flex-box(column, center, center, nowrap);
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+  height: 100%;
+  max-height: 740px;
   background: url(../img/bg-desktop.svg) $violet no-repeat left top;
 }
 
+header,
+main,
+footer {
+  width: 100%;
+}
+
 .container {
-  margin: 0 64px;
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
-.logo {
-  margin: 40px 0;
-  width: 230px;
-}
-
-.main-container {
-  @include flex-box(row, flex-start, flex-start, nowrap);
-  gap: 64px;
-
-  img {
-    width: 50%;
-    background: url(../img/illustration-mockups.svg) no-repeat center
-      center/cover;
+header {
+  .logo {
+    margin: 40px 0;
+    width: 230px;
   }
+}
 
-  .main-context {
-    width: 50%;
-    margin-top: 40px;
+main {
+  @include flex-box(row, center, center, nowrap);
 
-    .title {
-      font-family: 'Poppins';
-      font-size: 48px;
+  .main-container {
+    @include flex-box(row, flex-start, flex-start, nowrap);
+    gap: 64px;
+
+    img {
+      width: 50%;
+      background: url(../img/illustration-mockups.svg) no-repeat center
+        center/cover;
     }
 
-    .paragraph {
-      font-family: 'Open Sans';
-      line-height: 1.8;
-      font-size: 16px;
-      width: 80%;
-    }
+    .main-context {
+      width: 50%;
+      margin-top: 40px;
 
-    .register-btn {
-      cursor: pointer;
-      margin-top: 20px;
-      width: 200px;
-      padding: 12px;
-      border-radius: 30px;
-      border: none;
-      color: $violet;
-      font-size: 18px;
-      font-family: inherit;
-      transition: all 0.2s ease-in;
-      box-shadow: 0px 1px 12px 3px rgba(0, 0, 0, 0.35);
+      .title {
+        font-family: 'Poppins';
+        font-size: 42px;
+      }
 
-      &:hover {
-        background-color: $soft-magenta;
-        color: #fff;
+      .paragraph {
+        font-family: 'Open Sans';
+        line-height: 1.8;
+        font-size: 16px;
+        width: 90%;
+      }
+
+      .register-btn {
+        cursor: pointer;
+        margin-top: 20px;
+        width: 200px;
+        padding: 12px;
+        border-radius: 30px;
+        border: none;
+        color: $violet;
+        font-size: 18px;
+        font-family: inherit;
+        transition: all 0.2s ease-in;
+        box-shadow: 0px 1px 12px 3px rgba(0, 0, 0, 0.35);
+
+        &:hover {
+          background-color: $soft-magenta;
+          color: #fff;
+        }
       }
     }
   }

@@ -6,10 +6,10 @@ form.addEventListener("submit", (e) => {
     const errorText = form.querySelector(".error-text");
 
     if (inputEmail.value.trim() === '' || !validateEmail(inputEmail.value)) {
-        errorText.textContent = 'Please provide a valid email address';
+        errorText.style.visibility = 'visible';
         inputEmail.classList.add('invalid');
     } else {
-        errorText.textContent = '';
+        errorText.style.visibility = 'hidden';
         inputEmail.classList.remove('invalid');
     }
 });

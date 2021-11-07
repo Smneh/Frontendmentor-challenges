@@ -22,71 +22,77 @@ footer {
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
-  max-width: 650px;
+  max-width: 1220px;
   margin: 0 auto; }
 
 header .logo {
   margin: 48px 0; }
 
-main .title {
-  margin-bottom: 16px;
-  line-height: 1; }
-  main .title span {
-    font-weight: 300;
-    color: #969696; }
-
-main .paragraph {
-  font-size: 19px;
-  margin-bottom: 40px; }
-
-main .form {
+main .main-context {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
-  width: 100%; }
-  main .form .input {
-    width: 66%;
-    display: inline-block; }
-    main .form .input input {
-      width: 100%;
-      border: 2px solid #c2d3ff; }
-      main .form .input input::placeholder {
-        color: #c2d3ff; }
-      main .form .input input:focus {
-        outline: none; }
-      main .form .input input.invalid {
-        border: 2px solid #ff5263; }
-    main .form .input .error-text {
-      font-size: 12px;
-      color: #ff5263;
-      margin: 8px 28px; }
-  main .form input,
-  main .form button {
-    padding: 16px 24px;
-    border-radius: 30px;
-    font-size: 15px;
-    font-family: inherit; }
-  main .form button {
-    cursor: pointer;
-    width: 30%;
-    background-color: #4f7df3;
-    border: 2px solid #4f7df3;
-    color: #fff;
-    font-weight: 500;
-    box-shadow: -2px 5px 10px 0px #c2d3ff;
-    margin-left: 2%; }
-    main .form button:hover {
-      opacity: 0.8; }
-
-main .img-container {
   width: 100%;
-  height: 400px;
-  margin: 64px 0; }
-  main .img-container img {
+  max-width: 650px; }
+  main .main-context .title {
+    margin-bottom: 16px;
+    line-height: 1; }
+    main .main-context .title span {
+      font-weight: 300;
+      color: #969696; }
+  main .main-context .paragraph {
+    font-size: 19px;
+    margin-bottom: 40px; }
+  main .main-context .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100%; }
+    main .main-context .form .input {
+      width: 66%;
+      display: inline-block; }
+      main .main-context .form .input input {
+        width: 100%;
+        border: 2px solid #c2d3ff; }
+        main .main-context .form .input input::placeholder {
+          color: #c2d3ff; }
+        main .main-context .form .input input:focus {
+          outline: none; }
+        main .main-context .form .input input.invalid {
+          border: 2px solid #ff5263; }
+      main .main-context .form .input .error-text {
+        font-size: 12px;
+        color: #ff5263;
+        margin: 8px 28px;
+        visibility: hidden; }
+    main .main-context .form input,
+    main .main-context .form button {
+      padding: 16px 24px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-family: inherit; }
+    main .main-context .form button {
+      cursor: pointer;
+      width: 30%;
+      background-color: #4f7df3;
+      border: 2px solid #4f7df3;
+      color: #fff;
+      font-weight: 500;
+      box-shadow: -2px 5px 10px 0px #c2d3ff;
+      margin-left: 2%; }
+      main .main-context .form button:hover {
+        opacity: 0.8; }
+  main .main-context .img-container {
     width: 100%;
-    height: 100%; }
+    height: 400px;
+    margin: 64px 0; }
+    main .main-context .img-container img {
+      width: 100%;
+      height: 100%; }
 
 footer {
   margin-bottom: 40px; }
@@ -123,38 +129,37 @@ footer {
     opacity: 0.6; }
 
 @media (max-width: 700px) {
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center; }
   header .logo {
     margin: 80px 0; }
-  main .title {
-    font-size: 30px;
-    margin-bottom: 32px; }
-  main .paragraph {
-    font-size: 16px;
-    margin-bottom: 52px; }
-  main .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 100%; }
-    main .form .input,
-    main .form button {
-      width: 100%;
-      margin: 0; }
-    main .form .input .error-text {
-      font-size: 13px;
-      margin: 8px 0 32px 0; }
-  main .img-container {
-    margin: 52px 0 100px 0;
-    height: 280px; } }
+  main .main-context {
+    max-width: 400px;
+    padding: 0 16px; }
+    main .main-context .title {
+      font-size: 30px;
+      margin-bottom: 32px; }
+    main .main-context .paragraph {
+      font-size: 16px;
+      margin-bottom: 52px; }
+    main .main-context .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%; }
+      main .main-context .form .input,
+      main .main-context .form button {
+        width: 100%;
+        margin: 0; }
+      main .main-context .form .input .error-text {
+        font-size: 13px;
+        margin: 8px 0 32px 0; }
+    main .main-context .img-container {
+      margin: 52px 0 100px 0;
+      height: 280px; } }
 
 @media (max-width: 410px) {
-  .container {
-    padding: 0 24px; }
-  main .img-container {
-    height: 200px; } }
+  main .main-context {
+    text-align: center; }
+    main .main-context .img-container {
+      height: 200px; } }

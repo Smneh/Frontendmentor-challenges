@@ -1,8 +1,4 @@
 @media (max-width: 1200px) {
-  .container {
-    padding: 104px 60px;
-  }
-
   .title {
     width: 50%;
     h1 {
@@ -22,6 +18,10 @@
 }
 
 @media (max-width: 900px) {
+  main {
+    max-height: 865px;
+  }
+
   .container {
     max-width: 500px;
     margin: 0 auto;
@@ -73,11 +73,16 @@
   }
 }
 
-@media screen and (max-height: 720px) and (min-width: 1200px),
-  (max-height: 740px) and (min-width: 900px) and (max-width: 1200px),
+@media screen and (max-height: 575px) and (min-width: 1200px),
+  (max-height: 575px) and (min-width: 900px) and (max-width: 1200px),
   (max-height: 865px) and (min-width: 450px) and (max-width: 900px),
   (max-width: 450px) {
   body {
+    height: auto;
     overflow-y: auto;
+  }
+
+  main {
+    max-height: unset;
   }
 }

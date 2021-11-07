@@ -12,17 +12,17 @@ form.addEventListener("submit", (e) => {
         if (input.value.trim() === '') {
             errorEl.textContent = `${input.placeholder} cannot be empty`;
             errorIcon.style.display = 'block';
-            input.classList.add("invalid");
+            input.closest('.input').classList.add("invalid");
         }
         else if (input.value.trim !== '' && input.id === 'email' && !validateEmail(input.value)) {
             errorEl.textContent = 'Looks like this is not an email';
             errorIcon.style.display = 'block';
-            input.classList.add("invalid");
+            input.closest('.input').classList.add("invalid");
         }
         else {
             errorIcon.style.display = 'none';
             errorEl.textContent = '';
-            input.classList.remove("invalid");
+            input.closest('.input').classList.remove("invalid");
         }
     });
 });

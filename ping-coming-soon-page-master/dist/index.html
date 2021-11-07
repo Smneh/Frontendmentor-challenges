@@ -23,21 +23,25 @@
     </header>
     <main>
       <div class="container">
-        <h1 class="title"><span> We are launching </span>soon!</h1>
-        <p class="paragraph">Subscribe and get notified</p>
-        <form class="form">
-          <div class="input">
-            <input
-              type="email"
-              id="email-input"
-              placeholder="Your email address..."
-            />
-            <p class="error-text"></p>
+        <div class="main-context">
+          <h1 class="title"><span> We are launching </span>soon!</h1>
+          <p class="paragraph">Subscribe and get notified</p>
+          <form class="form">
+            <div class="input">
+              <label for="email"></label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email address..."
+              />
+              <p class="error-text">Please provide a valid email address</p>
+            </div>
+            <button>Notify Me</button>
+          </form>
+          <div class="img-container">
+            <img src="./img/illustration-dashboard.png" alt="" />
           </div>
-          <button>Notify Me</button>
-        </form>
-        <div class="img-container">
-          <img src="./img/illustration-dashboard.png" alt="" />
         </div>
       </div>
     </main>

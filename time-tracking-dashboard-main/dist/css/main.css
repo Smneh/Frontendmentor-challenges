@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 .box {
-  border-radius: 15px;
-  width: 250px; }
+  border-radius: 15px; }
 
 .bg-dark {
   background-color: #1c1f4a; }
@@ -25,11 +24,11 @@ main {
   flex-wrap: nowrap;
   margin: 0 auto;
   background-color: #0f1424;
+  overflow: hidden;
   color: #fff;
-  padding: 100px 64px;
   width: 100%;
-  max-width: 1600px;
-  height: 800px; }
+  height: 100%;
+  max-height: 740px; }
 
 .container {
   display: flex;
@@ -38,10 +37,13 @@ main {
   align-items: center;
   flex-wrap: nowrap;
   gap: 32px;
-  width: 100%; }
+  width: 100%;
+  max-width: 1220px;
+  margin: 32px auto; }
 
 .dashboard-info {
-  height: 465px; }
+  height: 465px;
+  width: 250px; }
   .dashboard-info .user {
     background-color: #5847eb;
     padding: 24px; }
@@ -86,68 +88,69 @@ main {
   gap: 32px;
   width: 815px;
   min-height: 465px; }
-  .reports-container .icon {
-    width: 100%;
-    height: 70px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: -25px; }
-    .reports-container .icon img {
-      position: absolute;
-      right: 12px;
-      top: -5px; }
-    .reports-container .icon-work {
-      background-color: #ff8c66; }
-    .reports-container .icon-play {
-      background-color: #56c2e6; }
-    .reports-container .icon-study {
-      background-color: #ff5c7c; }
-    .reports-container .icon-exercise {
-      background-color: #4acf81; }
-    .reports-container .icon-social {
-      background-color: #7536d3; }
-    .reports-container .icon-self-care {
-      background-color: #f1c65b; }
-  .reports-container .report {
-    padding: 24px 0 28px 24px;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.5s ease; }
-    .reports-container .report:hover {
-      background-color: #3d437f; }
-    .reports-container .report .title {
-      margin-bottom: 20px;
-      font-size: 16px; }
-    .reports-container .report .time {
-      display: none; }
-      .reports-container .report .time.show {
-        display: block; }
-      .reports-container .report .time p {
-        font-size: 44px;
-        font-weight: 300;
-        margin-bottom: 8px; }
-      .reports-container .report .time small {
-        opacity: 0.6;
-        font-size: 13px;
-        font-weight: 300; }
-    .reports-container .report .circles {
+  .reports-container .report-box {
+    width: 250px; }
+    .reports-container .report-box .icon {
+      width: 100%;
+      height: 70px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: -25px; }
+      .reports-container .report-box .icon img {
+        position: absolute;
+        right: 12px;
+        top: -5px; }
+      .reports-container .report-box .icon-work {
+        background-color: #ff8c66; }
+      .reports-container .report-box .icon-play {
+        background-color: #56c2e6; }
+      .reports-container .report-box .icon-study {
+        background-color: #ff5c7c; }
+      .reports-container .report-box .icon-exercise {
+        background-color: #4acf81; }
+      .reports-container .report-box .icon-social {
+        background-color: #7536d3; }
+      .reports-container .report-box .icon-self-care {
+        background-color: #f1c65b; }
+    .reports-container .report-box .report {
+      padding: 24px 0 28px 24px;
       cursor: pointer;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      font-size: 5px;
-      opacity: 0.6;
-      padding: 4px;
-      transition: opacity 0.2s ease; }
-      .reports-container .report .circles:hover {
-        opacity: 1; }
-      .reports-container .report .circles i {
-        margin-left: 1px; }
+      position: relative;
+      transition: background-color 0.5s ease; }
+      .reports-container .report-box .report:hover {
+        background-color: #3d437f; }
+      .reports-container .report-box .report .title {
+        margin-bottom: 20px;
+        font-size: 16px; }
+      .reports-container .report-box .report .time {
+        display: none; }
+        .reports-container .report-box .report .time.show {
+          display: block; }
+        .reports-container .report-box .report .time p {
+          font-size: 44px;
+          font-weight: 300;
+          margin-bottom: 8px; }
+        .reports-container .report-box .report .time small {
+          opacity: 0.6;
+          font-size: 13px;
+          font-weight: 300; }
+      .reports-container .report-box .report .circles {
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 5px;
+        opacity: 0.6;
+        padding: 4px;
+        transition: opacity 0.2s ease; }
+        .reports-container .report-box .report .circles:hover {
+          opacity: 1; }
+        .reports-container .report-box .report .circles i {
+          margin-left: 1px; }
 
 @media (max-width: 1225px) {
   main {
-    height: unset;
-    padding: 100px 32px; }
+    max-height: 800px; }
   .container {
     align-items: flex-start;
     gap: 20px; }
@@ -156,13 +159,17 @@ main {
     gap: 20px; } }
 
 @media (max-width: 860px) {
+  main {
+    max-height: unset; }
   .container {
     flex-direction: column;
-    align-items: center; }
-  .box {
-    width: 400px; }
+    align-items: center;
+    width: 100%;
+    margin: 32px 16px; }
   .dashboard-info {
-    height: unset; }
+    height: unset;
+    width: 100%;
+    max-width: 400px; }
     .dashboard-info .user {
       display: flex;
       flex-direction: row;
@@ -185,13 +192,15 @@ main {
         .dashboard-info .time-period ul li {
           font-size: 18px; }
   .reports-container {
-    width: 400px; }
-    .reports-container .report .title {
-      font-size: 18px; } }
+    width: 100%;
+    max-width: 400px; }
+    .reports-container .report-box {
+      width: 100%;
+      max-width: 400px; }
+      .reports-container .report-box .report .title {
+        font-size: 18px; } }
 
 @media (max-width: 460px) {
-  .box {
-    width: 280px; }
   .dashboard-info .user img {
     width: 50px;
     height: 50px; }
@@ -203,25 +212,24 @@ main {
     padding: 24px; }
     .dashboard-info .time-period ul li {
       font-size: 14px; }
-  .reports-container {
-    width: 280px; }
-    .reports-container .icon {
-      margin-bottom: -35px; }
-    .reports-container .report {
-      padding: 20px; }
-      .reports-container .report .title {
-        font-size: 13px;
-        margin-bottom: 8px; }
-      .reports-container .report .time.show {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap; }
-      .reports-container .report .time p {
-        font-size: 25px;
-        margin-bottom: 0; } }
+  .reports-container .report-box .icon {
+    margin-bottom: -35px; }
+  .reports-container .report-box .report {
+    padding: 20px; }
+    .reports-container .report-box .report .title {
+      font-size: 13px;
+      margin-bottom: 8px; }
+    .reports-container .report-box .report .time.show {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; }
+    .reports-container .report-box .report .time p {
+      font-size: 25px;
+      margin-bottom: 0; } }
 
-@media screen and (max-height: 720px) and (min-width: 1225px), (max-height: 800px) and (min-width: 860px) and (max-width: 1225px), (max-height: 1800px) and (min-width: 460px) and (max-width: 860px), (max-width: 460px) {
+@media screen and (max-height: 535px) and (min-width: 1225px), (max-height: 800px) and (min-width: 860px) and (max-width: 1225px), (max-height: 1690px) and (min-width: 460px) and (max-width: 860px), (max-width: 460px) {
   body {
-    overflow: scroll; } }
+    height: auto;
+    overflow-y: auto; } }

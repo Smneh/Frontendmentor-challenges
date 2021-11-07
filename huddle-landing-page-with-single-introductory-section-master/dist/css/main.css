@@ -8,58 +8,75 @@
 body {
   font-family: 'Poppins';
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  overflow-x: hidden; }
 
-.bg-container {
-  max-height: 800px;
+.context-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+  height: 100%;
+  max-height: 740px;
   background: url(../img/bg-desktop.svg) #674baf no-repeat left top; }
 
-.container {
-  margin: 0 64px; }
+header,
+main,
+footer {
+  width: 100%; }
 
-.logo {
+.container {
+  max-width: 1220px;
+  margin: 0 auto; }
+
+header .logo {
   margin: 40px 0;
   width: 230px; }
 
-.main-container {
+main {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 64px; }
-  .main-container img {
-    width: 50%;
-    background: url(../img/illustration-mockups.svg) no-repeat center center/cover; }
-  .main-container .main-context {
-    width: 50%;
-    margin-top: 40px; }
-    .main-container .main-context .title {
-      font-family: 'Poppins';
-      font-size: 48px; }
-    .main-container .main-context .paragraph {
-      font-family: 'Open Sans';
-      line-height: 1.8;
-      font-size: 16px;
-      width: 80%; }
-    .main-container .main-context .register-btn {
-      cursor: pointer;
-      margin-top: 20px;
-      width: 200px;
-      padding: 12px;
-      border-radius: 30px;
-      border: none;
-      color: #674baf;
-      font-size: 18px;
-      font-family: inherit;
-      transition: all 0.2s ease-in;
-      box-shadow: 0px 1px 12px 3px rgba(0, 0, 0, 0.35); }
-      .main-container .main-context .register-btn:hover {
-        background-color: #e882e8;
-        color: #fff; }
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; }
+  main .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 64px; }
+    main .main-container img {
+      width: 50%;
+      background: url(../img/illustration-mockups.svg) no-repeat center center/cover; }
+    main .main-container .main-context {
+      width: 50%;
+      margin-top: 40px; }
+      main .main-container .main-context .title {
+        font-family: 'Poppins';
+        font-size: 42px; }
+      main .main-container .main-context .paragraph {
+        font-family: 'Open Sans';
+        line-height: 1.8;
+        font-size: 16px;
+        width: 90%; }
+      main .main-container .main-context .register-btn {
+        cursor: pointer;
+        margin-top: 20px;
+        width: 200px;
+        padding: 12px;
+        border-radius: 30px;
+        border: none;
+        color: #674baf;
+        font-size: 18px;
+        font-family: inherit;
+        transition: all 0.2s ease-in;
+        box-shadow: 0px 1px 12px 3px rgba(0, 0, 0, 0.35); }
+        main .main-container .main-context .register-btn:hover {
+          background-color: #e882e8;
+          color: #fff; }
 
 footer {
   padding: 20px 0; }
@@ -92,46 +109,48 @@ footer {
           color: #e882e8; }
 
 @media (max-width: 1300px) {
-  .main-container {
+  .container {
+    margin: 0 32px; }
+  main .main-container {
     gap: 32px; }
-    .main-container img {
+    main .main-container img {
       width: 60%; }
-    .main-container .main-context {
+    main .main-container .main-context {
       width: 40%;
       margin-top: 24px; }
-      .main-container .main-context .title {
+      main .main-container .main-context .title {
         font-size: 40px; }
-      .main-container .main-context .paragraph {
+      main .main-container .main-context .paragraph {
         font-size: 15px;
         width: 90%; }
-      .main-container .main-context .register-btn {
+      main .main-container .main-context .register-btn {
         width: 180px;
         font-size: 16px; } }
 
 @media (max-width: 1000px) {
-  .bg-container {
-    max-height: unset;
-    background: url(../img/bg-mobile.svg) #674baf no-repeat top left/cover; }
+  .context-wrapper {
+    background: url(../img/bg-mobile.svg) #674baf no-repeat top left/cover;
+    max-height: 1100px; }
   .container {
     max-width: 600px;
     margin: 0 auto; }
-  .main-container {
+  main .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     gap: 0; }
-    .main-container img {
+    main .main-container img {
       width: 100%; }
-    .main-container .main-context {
+    main .main-container .main-context {
       width: 100%;
       margin-top: 40px;
       text-align: center; }
-      .main-container .main-context .paragraph {
+      main .main-container .main-context .paragraph {
         margin-top: 16px;
         width: 100%; }
-      .main-container .main-context .register-btn {
+      main .main-container .main-context .register-btn {
         margin-top: 32px;
         width: 250px; }
   footer {
@@ -148,26 +167,26 @@ footer {
     margin: 0 32px; } }
 
 @media (max-width: 500px) {
-  .logo {
+  header .logo {
     width: 130px;
     margin: 28px 0; }
-  .main-container .main-context .title {
+  main .main-container .main-context .title {
     font-size: 28px; }
-  .main-container .main-context .paragraph {
+  main .main-container .main-context .paragraph {
     font-size: 14px; }
-  .main-container .main-context .register-btn {
+  main .main-container .main-context .register-btn {
     width: 230px; } }
 
 @media (max-width: 375px) {
-  .bg-container {
+  .context-wrapper {
     background: url(../img/bg-mobile.svg) #674baf no-repeat top left; }
-  .main-container .main-context .title {
+  main .main-container .main-context .title {
     font-size: 22px; }
-  .main-container .main-context .paragraph {
+  main .main-container .main-context .paragraph {
     font-size: 13px; }
-  .main-container .main-context .register-btn {
+  main .main-container .main-context .register-btn {
     width: 200px; } }
 
-@media (max-height: 720px) {
+@media screen and (max-height: 650px) and (min-width: 1000px), (max-width: 1000px) {
   body {
     height: auto; } }
