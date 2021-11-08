@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="logo">
+          <img src="./img/logo.svg" alt="" />
+        </div>
+        <div class="main-context">
+          <div class="calculator">
+            <form action="" class="form">
+              <div class="bill-container">
+                <label for="bill">Bill</label>
+                <div class="user-input">
+                  <img src="./img/icon-dollar.svg" alt="" />
+                  <input  name="bill" id="bill" type="number" placeholder="0" />
+                  <div class="error-txt">Can't be zero</div>
+                </div>
+              </div>
+
+              <div class="tips-selection">
+                <label>Select Tip %</label>
+                <div class="tips">
+                  <div class="tip">5%</div>
+                  <div class="tip">10%</div>
+                  <div class="tip">15%</div>
+                  <div class="tip">25%</div>
+                  <div class="tip">50%</div>
+                  <div class="custom">
+                    <input type="number" placeholder="Custom" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="people-amount">
+                <label for="people">Number of People</label>
+                <div class="user-input">
+                  <img src="./img/icon-person.svg" alt="" />
+                  <input
+                  type="number"
+                  placeholder="0"
+                  name="people"
+                  id="people"
+                  />
+                  <div class="error-txt">Can't be zero</div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="result-reset">
+            <div class="results">
+              <div class="result-container">
+                <p>
+                  Tip amount <br />
+                  <small>/ person</small>
+                </p>
+                <div class="result">
+                  <span>$</span>
+                  <div id="tip-amount">0.00</div>
+                </div>
+              </div>
+
+              <div class="result-container">
+                <p>
+                  Total <br />
+                  <small>/ person</small>
+                </p>
+                <div class="result">
+                  <span>$</span>
+                  <div id="total-amount">0.00</div>
+                </div>
+              </div>
+            </div>
+
+            <input type="submit" class="reset-btn" id="reset-btn" value="RESET" disabled></input>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

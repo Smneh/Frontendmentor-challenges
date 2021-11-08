@@ -1,0 +1,22 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "tip calculator app",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smneh/Frontendmentor-challenges/tree/main/tip-calculator-app.git"
+  },
+  "author": "Smneh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/tip-calculator-app/issues"
+  },
+  "homepage": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/tip-calculator-app#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
