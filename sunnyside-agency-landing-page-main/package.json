@@ -1,0 +1,22 @@
+{
+  "name": "sunnyside-agency-landing-page",
+  "version": "1.0.0",
+  "description": "Sunnyside agency landing page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smneh/.git"
+  },
+  "author": "Smneh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smneh//issues"
+  },
+  "homepage": "https://github.com/Smneh/#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
