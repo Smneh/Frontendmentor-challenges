@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smneh/.git"
+    "url": "git+https://github.com/Smneh/Frontendmentor-challenges/tree/main/sunnyside-agency-landing-page-main.git"
   },
   "author": "Smneh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Smneh//issues"
+    "url": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/sunnyside-agency-landing-page-main/issues"
   },
-  "homepage": "https://github.com/Smneh/#readme",
+  "homepage": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/sunnyside-agency-landing-page-main#readme",
   "devDependencies": {
     "node-sass": "^6.0.1"
   }

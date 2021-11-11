@@ -1,3 +1,365 @@
-@media (max-width: px) {
- 
+@media (max-width: 1080px) {
+  .navigation {
+    li {
+      padding: 16px;
+    }
+  }
+
+  header {
+    .hero-text {
+      h1 {
+        word-spacing: 6px;
+        letter-spacing: 3px;
+        font-size: 36px;
+      }
+    }
+  }
+
+  main {
+    .section {
+      &-a,
+      &-b,
+      &-c {
+        height: 480px;
+      }
+
+      //section a & b
+      &-a,
+      &-b {
+        .text {
+          padding: 16px 64px;
+          gap: 20px;
+
+          h1 {
+            font-size: 36px;
+          }
+
+          p {
+            line-height: 1.5;
+            font-size: 16px;
+            width: 100%;
+          }
+
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+
+      //section c
+      &-c {
+        .text {
+          h1 {
+            font-size: 26px;
+            margin-bottom: 12px;
+          }
+
+          p {
+            margin-bottom: 32px;
+            width: 70%;
+            font-size: 16px;
+          }
+        }
+      }
+
+      //section d
+      &-d {
+        padding: 64px;
+
+        .testimonials {
+          gap: 20px;
+          .testimonial {
+            gap: 32px;
+            width: 32%;
+
+            p {
+              width: 100%;
+            }
+
+            .client-info {
+              h3 {
+                font-size: 17px;
+              }
+
+              small {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      &-e {
+        .images-container {
+          @include flex-box(row, flex-start, center, wrap);
+
+          .img {
+            width: 25%;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 32px;
+
+    .logo {
+      margin-bottom: 16px;
+    }
+
+    .navigation {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  header,
+  main,
+  footer {
+    max-width: 400px;
+  }
+
+  header {
+    height: 480px;
+    min-height: unset;
+    max-height: unset;
+
+    nav {
+      position: relative;
+
+      .menu {
+        &-icon {
+          display: block;
+          color: $white-color;
+          font-size: 25px;
+          cursor: pointer;
+        }
+
+        .navigation {
+          display: none;
+
+          &.show {
+            @include flex-box(column, center, center, nowrap);
+            background-color: $white-color;
+            position: absolute;
+            top: 100px;
+            left: 7%;
+            width: 86%;
+            padding: 36px 0;
+            gap: 8px;
+            z-index: 20;
+
+            li {
+              padding: 12px 24px;
+              font-size: 17px;
+
+              &.active {
+                background-color: $yellow;
+              }
+
+              &:hover {
+                background-color: inherit;
+
+                a {
+                  color: unset;
+                }
+              }
+
+              a {
+                color: $dark-grayish-blue;
+                font-weight: 600;
+              }
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-bottom: 30px solid $white-color;
+              border-left: 30px solid transparent;
+              top: -28px;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-text {
+      @include flex-box(column, center, center, nowrap);
+      width: 100%;
+      margin-top: 64px;
+
+      h1 {
+        text-align: center;
+        font-size: 34px;
+      }
+
+      img {
+        top: 65%;
+      }
+    }
+  }
+
+  header::before {
+    background: url('../img/mobile/image-header.jpg') no-repeat center
+      center/cover;
+  }
+
+  main {
+    .section {
+      &-a,
+      &-b,
+      &-c {
+        flex-direction: column;
+        height: max-content;
+      }
+
+      //section a & b
+      &-a,
+      &-b {
+        .image,
+        .text {
+          width: 100%;
+        }
+
+        .text {
+          padding: 64px 32px;
+          gap: 20px;
+          text-align: center;
+          align-items: center;
+
+          p {
+            width: 100%;
+          }
+        }
+
+        .image {
+          height: 300px;
+        }
+      }
+
+      &-a {
+        .image {
+          background: url('../img/mobile/image-transform.jpg') no-repeat center
+            center/cover;
+        }
+      }
+
+      &-b {
+        .image {
+          background: url('../img/mobile/image-stand-out.jpg') no-repeat center
+            center/cover;
+        }
+      }
+
+      //section c
+      &-c {
+        .text {
+          width: 100%;
+          height: 600px;
+          padding: 0 20px;
+
+          h1 {
+            margin-bottom: 20px;
+          }
+
+          p {
+            margin-bottom: 64px;
+            width: 100%;
+          }
+        }
+
+        .design {
+          background: url('../img/mobile/image-graphic-design.jpg') no-repeat
+            top center/cover;
+        }
+
+        .photography {
+          background: url('../img/mobile/image-photography.jpg') no-repeat top
+            center/cover;
+        }
+      }
+
+      //section d
+      &-d {
+        padding: 40px 32px;
+
+        h4 {
+          font-size: 16px;
+          margin-bottom: 40px;
+        }
+
+        .testimonials {
+          flex-direction: column;
+          gap: 40px;
+
+          .testimonial {
+            gap: 16px;
+            width: 100%;
+
+            p {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      //section e
+      &-e {
+        .images-container {
+          .img {
+            width: 50%;
+            height: 200px;
+
+            &-1 {
+              background: url(../img/mobile/image-gallery-milkbottles.jpg)
+                no-repeat top center/cover;
+            }
+            &-2 {
+              background: url(../img/mobile/image-gallery-orange.jpg) no-repeat
+                top center/cover;
+            }
+            &-3 {
+              background: url(../img/mobile/image-gallery-cone.jpg) no-repeat
+                top center/cover;
+            }
+            &-4 {
+              background: url(../img/mobile/image-gallery-sugar-cubes.jpg)
+                no-repeat top center/cover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 52px 32px;
+
+    .logo {
+      width: 180px;
+      height: 34px;
+    }
+
+    nav {
+      width: 100%;
+
+      .navigation {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 32px;
+        gap: 8px;
+
+        li {
+          font-size: 18px;
+          padding: 0;
+        }
+      }
+    }
+  }
 }

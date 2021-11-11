@@ -5,3 +5,36 @@
   align-items: $align;
   flex-wrap: $wrap;
 }
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Fraunces';
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigation {
+  @include flex-box(row, space-between, center, nowrap);
+  gap: 12px;
+
+  li {
+    cursor: pointer;
+    padding: 16px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+}
