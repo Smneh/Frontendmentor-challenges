@@ -1,0 +1,51 @@
+@import 'config';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+//--General Styling--//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Commissioner';
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+header,
+main {
+  margin: 0 auto;
+  max-width: 1540px;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+    url('../img/image-hero-desktop.jpg') no-repeat center center/cover;
+  height: 400px;
+
+  .navbar {
+    @include flex-box(row, space-between, center, nowrap);
+    padding: 32px 16px;
+    .hamburger-menu-icon {
+      display: none;
+    }
+
+    .menu {
+      @include flex-box(row, center, center, nowrap);
+      gap: 8px;
+
+      li {
+        padding: 0 12px;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@import 'media';

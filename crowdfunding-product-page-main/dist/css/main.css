@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+.btn-primary, .btn-light {
+  display: inline-block;
+  padding: 12px 20px;
+  transition: all 0.3s ease-in;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Commissioner';
+  font-size: 16px;
+  overflow-x: hidden; }
+
+header,
+main {
+  margin: 0 auto;
+  max-width: 1540px; }
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("../img/image-hero-desktop.jpg") no-repeat center center/cover;
+  height: 400px; }
+  header .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 32px 16px; }
+    header .navbar .hamburger-menu-icon {
+      display: none; }
+    header .navbar .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 8px; }
+      header .navbar .menu li {
+        padding: 0 12px; }
+        header .navbar .menu li a {
+          color: #fff; }
