@@ -251,11 +251,12 @@ main {
       z-index: -9; }
     main .section-b .phones-img {
       content: url("../img/illustration-phones.svg");
-      top: -18%;
-      left: 10%;
+      top: 50%;
+      left: 25%;
       width: 420px;
       height: 420px;
-      z-index: 10; }
+      z-index: 10;
+      transform: translate(-50%, -50%); }
   main .section-c {
     display: flex;
     flex-direction: row;
@@ -312,8 +313,6 @@ footer {
       width: 80%; }
     main .section-b .circles-img {
       left: -25%; }
-    main .section-b .phones-img {
-      left: 2%; }
   main .section-c {
     margin-bottom: 40px; }
     main .section-c .laptop-img {
@@ -325,19 +324,10 @@ footer {
 @media (max-width: 970px) {
   main .section-a .editor-img {
     right: -24%; }
-  main .section-b .phones-img {
-    left: 0;
-    top: -12%;
-    width: 380px;
-    height: 380px; }
   main .section-c .laptop-img {
     left: -28%; } }
 
 @media (max-width: 850px) {
-  header,
-  main,
-  footer {
-    max-width: 400px; }
   header {
     background: url("../img/bg-pattern-intro.svg") no-repeat 40% 35%/350%;
     border-bottom-left-radius: 100px; }
@@ -474,18 +464,17 @@ footer {
         font-size: 40px; }
     main .section-b .circles-img {
       position: absolute;
-      top: -33%;
-      left: -33%;
+      transform: translate(-50%, -50%);
+      top: 20%;
+      left: 50%;
       z-index: -9;
       width: 650px;
       height: 650px; }
     main .section-b .phones-img {
       position: absolute;
       content: url("../img/illustration-phones.svg");
-      width: 340px;
-      height: 340px;
-      top: -20%;
-      left: 5%; }
+      top: 12%;
+      left: 47%; }
   main .section-c {
     flex-direction: column;
     height: unset;
@@ -514,8 +503,7 @@ footer {
           width: 100%;
           align-items: center; } }
 
-@media (max-width: 370px) {
+@media (max-width: 385px) {
   main .section-b .phones-img {
     width: 320px;
-    height: 320px;
-    left: -2%; } }
+    height: 320px; } }
