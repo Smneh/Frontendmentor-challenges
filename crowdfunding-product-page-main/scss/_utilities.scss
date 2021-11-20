@@ -23,28 +23,96 @@ a {
 //Buttons
 %btn-shared {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 16px 32px;
   transition: all 0.3s ease-in;
   border: none;
   cursor: pointer;
   border-radius: 30px;
+  font-weight: 700;
+  font-family: inherit;
 }
 
 .btn {
   &-primary {
     @extend %btn-shared;
+    color: #fff;
+    background-color: $moderate-cyan;
 
-    &:hover {
+    &:hover,
+    &:focus {
+      background-color: $dark-cyan;
     }
   }
 
-  &-light {
+  &-gray {
     @extend %btn-shared;
-
-    &:hover {
-    }
+    color: rgb(85, 85, 85);
+    background-color: rgb(235, 235, 235);
   }
 
   &-disabled {
+    @extend %btn-shared;
+    color: rgb(235, 235, 235);
+    background-color: rgb(131, 131, 131);
+  }
+}
+
+//Boxes
+%box-shared {
+  @include flex-box(column, center, center, nowrap);
+  padding: 52px 36px 36px 36px;
+  border-radius: 6px;
+  background-color: #fff;
+  width: 600px;
+  margin-bottom: 24px;
+
+  p,
+  small {
+    font-weight: 500;
+    color: rgb(150, 150, 150);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+.box-inner {
+  @extend %box-shared;
+  align-items: flex-start;
+  padding: 32px 24px 24px 24px;
+  width: 100%;
+  border: 2px solid rgb(209, 209, 209);
+
+  .title {
+    width: 100%;
+    @include flex-box(row, space-between, center, nowrap);
+
+    .text-cyan {
+      color: $moderate-cyan;
+    }
+  }
+
+  .details {
+    width: 100%;
+    @include flex-box(row, flex-start, center, nowrap);
+
+    div {
+      @include flex-box(row, flex-start, center, nowrap);
+
+      h3 {
+        font-size: 28px;
+        margin-right: 8px;
+      }
+    }
+
+    button {
+      padding: 12px 28px;
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
   }
 }

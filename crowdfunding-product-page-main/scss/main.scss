@@ -29,6 +29,11 @@ header {
   .navbar {
     @include flex-box(row, space-between, center, nowrap);
     padding: 32px 16px;
+
+    .close-menu-icon {
+      display: none;
+    }
+
     .hamburger-menu-icon {
       display: none;
     }
@@ -48,4 +53,371 @@ header {
   }
 }
 
+main {
+  @include flex-box(row, center, center, nowrap);
+  background-color: rgb(238, 238, 238);
+
+  .container {
+    @include flex-box(row, center, center, nowrap);
+    max-width: unset;
+    .box {
+      &-1 {
+        @extend %box-shared;
+        position: relative;
+        margin-top: -80px;
+
+        .logo-mastercraft {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        h2 {
+          margin-bottom: 12px;
+        }
+
+        p {
+          margin-bottom: 32px;
+        }
+
+        .btns-container {
+          @include flex-box(row, space-between, center, nowrap);
+          width: 100%;
+
+          .bookmark {
+            position: relative;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            &.selected {
+              div {
+                span {
+                  display: none;
+                }
+                &::after {
+                  color: $dark-cyan;
+                  content: 'Bookmarked';
+                }
+              }
+
+              .bookmark-icon {
+                filter: invert(20%) sepia(100%) saturate(300%)
+                  hue-rotate(127deg) brightness(94%) contrast(200%);
+              }
+            }
+
+            div {
+              padding: 16px 16px 16px 52px;
+              font-size: 14px;
+            }
+
+            .bookmark-icon {
+              width: 45px;
+              height: 45px;
+              position: absolute;
+              left: 10%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+
+      &-2 {
+        @extend %box-shared;
+        @include flex-box(column, flex-start, flex-start, nowrap);
+
+        .info {
+          @include flex-box(row, flex-start, center, nowrap);
+          margin-bottom: 32px;
+
+          h2 {
+            margin-bottom: 4px;
+            font-size: 28px;
+          }
+
+          &-1 {
+            padding-right: 32px;
+          }
+
+          &-2,
+          &-3 {
+            padding: 0 64px 0 32px;
+          }
+
+          &-1,
+          &-2 {
+            border-right: 2px solid rgb(209, 209, 209);
+          }
+        }
+
+        .progress-bar {
+          width: 100%;
+          height: 10px;
+          background-color: rgb(235, 235, 235);
+          border-radius: 30px;
+          overflow: hidden;
+
+          .progress {
+            border-radius: 30px;
+            width: 70%;
+            height: 100%;
+            background-color: $moderate-cyan;
+          }
+        }
+      }
+
+      &-3 {
+        @extend %box-shared;
+        align-items: flex-start;
+
+        h4 {
+          margin-bottom: 16px;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+
+  &.show {
+    @include flex-box(row, center, center, nowrap);
+  }
+
+  .box-modal {
+    @extend %box-shared;
+    align-items: flex-start;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translate(-50%, -50%);
+    padding: 40px 36px;
+    margin: 64px 0;
+
+    &.hide {
+      display: none;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      cursor: pointer;
+      opacity: 0.4;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+
+      & + p {
+        margin-bottom: 28px;
+      }
+    }
+
+    .inner-boxes {
+      .box-inner {
+        padding: 0;
+        position: relative;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &.selected {
+          border-color: $moderate-cyan;
+
+          .context {
+            .inner-circle {
+              background-color: $moderate-cyan;
+              width: 50%;
+              height: 50%;
+              border-radius: 50%;
+            }
+          }
+
+          .pledge {
+            @include flex-box(row, flex-end, center, nowrap);
+            width: 100%;
+            border-top: 2px solid rgb(209, 209, 209);
+            padding: 24px 16px;
+
+            p {
+              margin-right: auto;
+            }
+
+            div {
+              @include flex-box(row, flex-end, center, nowrap);
+              .input {
+                cursor: pointer;
+                width: 90px;
+                height: 45px;
+                position: relative;
+                border-radius: 30px;
+                overflow: hidden;
+                margin-right: 12px;
+                border: 1px solid rgb(209, 209, 209);
+
+                &.focused,
+                &:hover {
+                  border-color: $moderate-cyan;
+                }
+
+                input {
+                  cursor: pointer;
+                  position: absolute;
+                  right: 0;
+                  width: 60%;
+                  height: 100%;
+                  padding-right: 12px;
+                  border-radius: 30px;
+                  font-family: inherit;
+                  font-weight: 700;
+                  border: none;
+                  text-align: left;
+
+                  &:focus {
+                    outline: none;
+                  }
+                }
+
+                small {
+                  position: absolute;
+                  top: 10px;
+                  left: 20px;
+                }
+              }
+
+              button {
+                width: 110px;
+                padding: 0;
+                height: 45px;
+              }
+            }
+          }
+        }
+
+        .context {
+          @include flex-box(column, center, flex-start, nowrap);
+          gap: 12px;
+          padding: 24px 20px 24px 40px;
+
+          .header {
+            width: 100%;
+            @include flex-box(row, space-between, center, nowrap);
+
+            .title,
+            .details {
+              width: unset;
+            }
+
+            .title {
+              h4 {
+                font-size: 14px;
+                margin-right: 16px;
+                cursor: pointer;
+
+                &:hover {
+                  color: $moderate-cyan;
+
+                  & + .circle {
+                    border-color: $moderate-cyan;
+                  }
+                }
+              }
+
+              .circle {
+                position: absolute;
+                @include flex-box(row, center, center, nowrap);
+                top: 28px;
+                left: 10px;
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgb(209, 209, 209);
+                border-radius: 50%;
+              }
+
+              .text-cyan {
+                font-weight: 700;
+              }
+            }
+
+            .details {
+              h3 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        .pledge {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .box-completed {
+    @extend %box-shared;
+    padding: 40px;
+    width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 33%;
+    display: none;
+
+    &.show {
+      display: flex;
+    }
+
+    img {
+      margin-bottom: 32px;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+//Hide Arrows From Input Number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
 @import 'media';

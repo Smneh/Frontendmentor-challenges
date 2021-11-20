@@ -1,3 +1,226 @@
-@media (max-width: px) {
- 
+@media (max-width: 600px) {
+  //header
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+      url('../img/image-hero-mobile.jpg') no-repeat center center/cover;
+    height: 300px;
+
+    .navbar {
+      position: relative;
+
+      &.mobile-modal {
+        align-items: flex-start;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 150;
+      }
+
+      .hamburger-menu-icon {
+        display: block;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      .menu {
+        display: none;
+
+        &.show {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          background-color: #fff;
+          gap: 0;
+          width: 90%;
+          top: 4%;
+          left: 5%;
+          z-index: 200;
+          border-radius: 10px;
+
+          li {
+            width: 100%;
+            padding: 20px;
+            border-bottom: 1px solid rgb(209, 209, 209);
+
+            a {
+              color: $black;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Boxes
+  %box-shared {
+    padding: 40px 28px;
+    width: 90%;
+    margin: 0 auto 24px auto;
+  }
+
+  .box-inner {
+    width: 100%;
+    padding: 24px 16px;
+
+    .title {
+      @include flex-box(column, center, flex-start, nowrap);
+    }
+  }
+
+  main {
+    .container {
+      .box {
+        &-1 {
+          margin-top: -80px;
+          text-align: center;
+
+          .btns-container {
+            width: 100%;
+
+            .bookmark {
+              div {
+                display: none;
+              }
+
+              .bookmark-icon {
+                position: unset;
+                transform: translate(0%, 0%);
+                margin-left: 8px;
+              }
+            }
+          }
+        }
+
+        &-2 {
+          .info {
+            width: 100%;
+            @include flex-box(column, center, center, nowrap);
+            margin-bottom: 0;
+
+            &-1,
+            &-2,
+            &-3 {
+              padding: 0 0 20px 0;
+              margin-bottom: 32px;
+            }
+
+            &-1,
+            &-2 {
+              border: none;
+              border-bottom: 2px solid rgb(209, 209, 209);
+            }
+          }
+        }
+
+        &-3 {
+          .title {
+            h4 {
+              margin-bottom: 8px;
+            }
+
+            p {
+              font-weight: 700;
+              margin-bottom: 16px;
+            }
+          }
+
+          .details {
+            @include flex-box(column, flex-start, flex-start, nowrap);
+            gap: 20px;
+
+            button {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    .box-modal {
+      .inner-boxes {
+        .box-inner {
+          &:first-of-type {
+            .context {
+              padding: 24px 20px 24px 40px;
+            }
+          }
+
+          .context {
+            position: relative;
+            padding-bottom: 64px;
+
+            .details {
+              position: absolute;
+              bottom: 20px;
+              left: 40px;
+            }
+          }
+
+          &.selected {
+            .pledge {
+              @include flex-box(column, center, center, nowrap);
+              p {
+                margin-right: 0;
+                margin-bottom: 16px;
+              }
+
+              div {
+                @include flex-box(row, flex-end, center, nowrap);
+
+                .input {
+                  cursor: pointer;
+                  width: 90px;
+                  height: 45px;
+                  position: relative;
+                  border-radius: 30px;
+                  overflow: hidden;
+                  margin-right: 12px;
+                  border: 1px solid rgb(209, 209, 209);
+
+                  &.focused,
+                  &:hover {
+                    border-color: $moderate-cyan;
+                  }
+
+                  input {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 0;
+                    width: 60%;
+                    height: 100%;
+                    padding-right: 12px;
+                    border-radius: 30px;
+                    font-family: inherit;
+                    font-weight: 700;
+                    border: none;
+                    text-align: left;
+
+                    &:focus {
+                      outline: none;
+                    }
+                  }
+
+                  small {
+                    position: absolute;
+                    top: 10px;
+                    left: 20px;
+                  }
+                }
+
+                button {
+                  width: 110px;
+                  padding: 0;
+                  height: 45px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
