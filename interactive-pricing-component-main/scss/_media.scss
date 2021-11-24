@@ -1,0 +1,104 @@
+@media (max-width: 600px) {
+  main {
+    background-size: auto;
+  }
+
+  .header {
+    h1 {
+      font-size: 22px;
+    }
+
+    p {
+      margin: 0 auto;
+      width: 65%;
+      font-size: 12px;
+    }
+  }
+
+  .card {
+    width: 90%;
+
+    &-main-context {
+      padding: 40px 28px;
+
+      .page-views {
+        text-align: center;
+      }
+
+      .price {
+        position: unset;
+        margin-bottom: 32px;
+      }
+
+      .billings {
+        p {
+          text-align: center;
+          font-size: 11px;
+
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
+
+        .yearly {
+          margin-right: 28px;
+
+          .discount {
+            width: 45px;
+            right: -50px;
+
+            span {
+              display: none;
+            }
+
+            &::after {
+              content: '-25%';
+            }
+          }
+        }
+      }
+    }
+
+    &-footer {
+      @include flex-box(column, center, center, nowrap);
+
+      .features {
+        margin-bottom: 20px;
+
+        .feature {
+          justify-content: center;
+        }
+      }
+
+      .start-btn {
+        cursor: pointer;
+        width: 180px;
+        height: 45px;
+        border-radius: 30px;
+        border: none;
+        background-color: $dark-desaturated-blue;
+        color: $pale-blue;
+        font-family: inherit;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .card {
+    &-main-context {
+      .billings {
+        .yearly {
+          .discount {
+            top: 6px;
+            right: -40px;
+          }
+        }
+      }
+    }
+  }
+}

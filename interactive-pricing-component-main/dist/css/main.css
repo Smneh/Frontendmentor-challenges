@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Manrope';
+  font-size: 15px;
+  color: #293356; }
+
+main {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  height: 100%;
+  background: url(../img/bg-pattern.svg) no-repeat top left/contain; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto; }
+
+.header {
+  margin: 64px 16px;
+  text-align: center;
+  position: relative;
+  z-index: 10; }
+  .header::before {
+    position: absolute;
+    content: url(../img/pattern-circles.svg);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: -1; }
+  .header h1 {
+    margin-bottom: 8px; }
+  .header p {
+    opacity: 0.6; }
+
+.card {
+  background-color: white;
+  width: 600px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px -7px rgba(0, 0, 0, 0.3); }
+  .card-main-context {
+    padding: 48px 40px;
+    border-bottom: 1px solid #ddd;
+    position: relative; }
+    .card-main-context .page-views {
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      opacity: 0.6;
+      font-size: 14px; }
+    .card-main-context .range-container {
+      width: 100%;
+      position: relative;
+      margin-bottom: 48px;
+      position: relative;
+      /* Chrome */
+      /* FireFox */ }
+      .card-main-context .range-container input[type='range'] {
+        background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%);
+        border-radius: 4px;
+        height: 10px;
+        width: 100%;
+        outline: none;
+        transition: background 450ms ease-in;
+        -webkit-appearance: none; }
+      .card-main-context .range-container input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #10d5c2 url("../img/icon-slider.svg") no-repeat center center;
+        box-shadow: 0px 15px 25px -5px #06f4dc;
+        cursor: grab;
+        transition: background 0.2s ease-in-out; }
+        .card-main-context .range-container input[type='range']::-webkit-slider-thumb:hover {
+          background-color: #5ae2d4; }
+        .card-main-context .range-container input[type='range']::-webkit-slider-thumb:active {
+          background-color: #0caa9b;
+          cursor: grabbing; }
+      .card-main-context .range-container input[type='range']::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #10d5c2 url("../img/icon-slider.svg") no-repeat center center;
+        box-shadow: 0px 15px 25px -5px #06f4dc;
+        cursor: grab;
+        transition: background 0.2s ease-in-out;
+        border: none; }
+        .card-main-context .range-container input[type='range']::-moz-range-thumb:hover {
+          background-color: #5ae2d4; }
+        .card-main-context .range-container input[type='range']::-moz-range-thumb:active {
+          background-color: #0caa9b;
+          cursor: grabbing; }
+    .card-main-context .price {
+      position: absolute;
+      top: 28px;
+      right: 40px;
+      font-size: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap; }
+      .card-main-context .price small {
+        font-size: 16px;
+        opacity: 0.6;
+        margin-left: 8px;
+        font-weight: 600; }
+    .card-main-context .billings {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      height: 25px; }
+      .card-main-context .billings p {
+        opacity: 0.7;
+        font-size: 13px; }
+      .card-main-context .billings .toggle-container {
+        height: 100%;
+        width: 65px; }
+        .card-main-context .billings .toggle-container .toggle {
+          visibility: hidden;
+          margin-left: -5px; }
+        .card-main-context .billings .toggle-container .toggle:checked + label,
+        .card-main-context .billings .toggle-container .toggle:hover + label {
+          background-color: #10d5c2; }
+        .card-main-context .billings .toggle-container .label {
+          background-color: #ddd;
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          width: 46px;
+          height: 95%;
+          border-radius: 50px; }
+        .card-main-context .billings .toggle-container .ball {
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          background-color: #fff;
+          border-radius: 50%;
+          right: 3px;
+          top: 5px;
+          animation: slideOn 0.3s linear forwards; }
+        .card-main-context .billings .toggle-container .toggle:checked + .label .ball {
+          animation: slideOff 0.3s linear forwards; }
+      .card-main-context .billings .yearly {
+        position: relative; }
+        .card-main-context .billings .yearly .discount {
+          position: absolute;
+          right: -90px;
+          width: 85px;
+          background-color: #feece7;
+          color: #ff8c66;
+          margin-left: 8px;
+          border-radius: 20px;
+          font-weight: 800;
+          padding: 4px 8px;
+          font-size: 10px; }
+  .card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 40px;
+    width: 100%; }
+    .card-footer .features .feature {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      font-size: 13px;
+      opacity: 0.6;
+      margin-bottom: 12px;
+      gap: 16px; }
+    .card-footer .start-btn {
+      cursor: pointer;
+      width: 180px;
+      height: 45px;
+      border-radius: 30px;
+      border: none;
+      background-color: #293356;
+      color: #bdccff;
+      font-family: inherit; }
+      .card-footer .start-btn:hover {
+        color: white; }
+
+@media (max-width: 600px) {
+  main {
+    background-size: auto; }
+  .header h1 {
+    font-size: 22px; }
+  .header p {
+    margin: 0 auto;
+    width: 65%;
+    font-size: 12px; }
+  .card {
+    width: 90%; }
+    .card-main-context {
+      padding: 40px 28px; }
+      .card-main-context .page-views {
+        text-align: center; }
+      .card-main-context .price {
+        position: unset;
+        margin-bottom: 32px; }
+      .card-main-context .billings p {
+        text-align: center;
+        font-size: 11px; }
+        .card-main-context .billings p:first-of-type {
+          margin-left: 0; }
+      .card-main-context .billings .yearly {
+        margin-right: 28px; }
+        .card-main-context .billings .yearly .discount {
+          width: 45px;
+          right: -50px; }
+          .card-main-context .billings .yearly .discount span {
+            display: none; }
+          .card-main-context .billings .yearly .discount::after {
+            content: '-25%'; }
+    .card-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap; }
+      .card-footer .features {
+        margin-bottom: 20px; }
+        .card-footer .features .feature {
+          justify-content: center; }
+      .card-footer .start-btn {
+        cursor: pointer;
+        width: 180px;
+        height: 45px;
+        border-radius: 30px;
+        border: none;
+        background-color: #293356;
+        color: #bdccff;
+        font-family: inherit; }
+        .card-footer .start-btn:hover {
+          color: white; } }
+
+@media (max-width: 325px) {
+  .card-main-context .billings .yearly .discount {
+    top: 6px;
+    right: -40px; } }
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1); }
+  50% {
+    transform: translateX(-100%) scale(1.2); }
+  100% {
+    transform: translateX(-200%) scale(1); } }
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(-200%) scale(1); }
+  50% {
+    transform: translateX(-100%) scale(1.2); }
+  100% {
+    transform: translateX(0) scale(1); } }
