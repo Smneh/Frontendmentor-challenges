@@ -1,21 +1,21 @@
 {
-  "name": "",
+  "name": "interactive-pricing-component",
   "version": "1.0.0",
-  "description": "",
+  "description": "interactive pricing component",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css --recursive"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smneh/.git"
+    "url": "git+https://github.com/Smneh/Frontendmentor-challenges/tree/main/interactive-pricing-component-main.git"
   },
   "author": "Smneh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Smneh//issues"
+    "url": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/interactive-pricing-component-main/issues"
   },
-  "homepage": "https://github.com/Smneh/#readme",
+  "homepage": "https://github.com/Smneh/Frontendmentor-challenges/tree/main/interactive-pricing-component-main#readme",
   "devDependencies": {
     "node-sass": "^6.0.1"
   }
