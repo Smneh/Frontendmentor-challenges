@@ -1,0 +1,281 @@
+@media (max-width: 1040px) {
+  main {
+    .section {
+      &-a {
+        img {
+          width: 600px;
+          height: 420px;
+        }
+
+        .context {
+          width: 54%;
+          left: 48%;
+          bottom: -2px;
+
+          h1 {
+            font-size: 32px;
+          }
+        }
+      }
+
+      &-b {
+        .images-container {
+          div {
+            h1 {
+              font-size: 25px;
+              margin: 0 0 32px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    height: 800px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/mobile/image-hero.jpg) no-repeat top left/cover;
+
+    .menu-icon {
+      display: block;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .hero-text {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  main {
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .section {
+      &-a {
+        margin: 64px 0;
+
+        img {
+          content: url('../img/mobile/image-interactive.jpg');
+          width: 100%;
+          height: unset;
+          margin-bottom: 64px;
+        }
+
+        .context {
+          position: unset;
+          width: 100%;
+          padding: 0 32px;
+          text-align: center;
+
+          h1 {
+            font-size: 28px;
+          }
+        }
+      }
+
+      &-b {
+        @include flex-box(column, center, center, nowrap);
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .images-container {
+          flex-direction: column;
+          width: 100%;
+
+          div {
+            width: 100%;
+            height: 200px;
+          }
+
+          .img {
+            &-1 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-deep-earth.jpg) no-repeat center
+                  center/cover;
+            }
+
+            &-2 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-night-arcade.jpg) no-repeat center
+                  center/cover;
+            }
+
+            &-3 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-soccer-team.jpg) no-repeat center
+                  center/cover;
+            }
+
+            &-4 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-grid.jpg) no-repeat center center/cover;
+              h1 {
+                width: 6ch;
+              }
+            }
+
+            &-5 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-from-above.jpg) no-repeat center
+                  center/cover;
+            }
+
+            &-6 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-pocket-borealis.jpg) no-repeat center
+                  center/cover;
+            }
+
+            &-7 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-curiosity.jpg) no-repeat center
+                  center/cover;
+            }
+
+            &-8 {
+              background: linear-gradient(
+                  to left,
+                  rgba(0, 0, 0, 0) 50%,
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url(../img/mobile/image-fisheye.jpg) no-repeat center
+                  center/cover;
+            }
+          }
+        }
+
+        .btn {
+          position: unset;
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 0;
+    }
+  }
+
+  //utilities
+  .navbar {
+    &.footer {
+      align-items: center;
+      padding: 0;
+      margin-bottom: 32px;
+
+      img {
+        padding-left: 0;
+      }
+    }
+
+    &.mobile {
+      background-color: $black;
+      position: absolute;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 64px 32px;
+
+      .menu-icon {
+        content: url(../img/icon-close.svg);
+      }
+
+      .menu {
+        @include flex-box(column, flex-start, flex-start, nowrap);
+        position: absolute;
+        top: 40%;
+
+        li {
+          padding: 16px 0;
+          text-transform: uppercase;
+          font-family: 'Josefin Sans';
+          font-weight: 300;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  .menu {
+    flex-direction: column;
+
+    &.social-links {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &.footer {
+      li {
+        padding: 12px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    height: 700px;
+
+    .hero-text {
+      h1 {
+        font-size: 42px;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  header {
+    height: 600px;
+
+    .hero-text {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+}

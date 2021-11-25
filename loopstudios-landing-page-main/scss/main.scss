@@ -1,0 +1,254 @@
+@import 'config';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;400&display=swap');
+
+//--General Styling--//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Alata';
+  font-size: 15px;
+}
+
+h1 {
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+main,
+footer {
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+header {
+  height: 600px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/desktop/image-hero.jpg) no-repeat top left/cover;
+  position: relative;
+
+  .menu-icon {
+    display: none;
+  }
+
+  .hero-text {
+    border: 3px solid $white;
+    width: 500px;
+    padding: 24px 32px;
+
+    h1 {
+      font-size: 56px;
+      color: $white;
+      font-weight: 300;
+    }
+  }
+}
+
+main {
+  .section {
+    &-a {
+      @include flex-box(column, flex-start, flex-start, nowrap);
+      margin: 100px 0;
+      position: relative;
+
+      img {
+        width: 650px;
+        height: 450px;
+      }
+
+      .context {
+        position: absolute;
+        background-color: $white;
+        width: 42%;
+        padding: 64px 16px 0 80px;
+        bottom: 0;
+        left: 43%;
+
+        h1 {
+          font-size: 40px;
+          margin-bottom: 16px;
+        }
+
+        p {
+          line-height: 1.8;
+          font-size: 14px;
+          color: $dark-gray;
+        }
+      }
+    }
+
+    &-b {
+      position: relative;
+      margin-bottom: 64px;
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+
+      .images-container {
+        @include flex-box(row, space-between, center, wrap);
+
+        div {
+          @include flex-box(row, flex-start, flex-end, wrap);
+          cursor: pointer;
+          width: 23%;
+          height: 450px;
+          margin-bottom: 32px;
+          position: relative;
+
+          &:hover {
+            h1 {
+              color: $black;
+              z-index: 20;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: rgba(255, 255, 255, 0.7);
+              z-index: 10;
+            }
+          }
+
+          h1 {
+            color: $white;
+            margin: 0 0 32px 32px;
+            width: 9ch;
+          }
+        }
+
+        .img {
+          &-1 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-deep-earth.jpg) no-repeat center
+                center/cover;
+          }
+
+          &-2 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-night-arcade.jpg) no-repeat center
+                center/cover;
+          }
+
+          &-3 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-soccer-team.jpg) no-repeat center
+                center/cover;
+          }
+
+          &-4 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-grid.jpg) no-repeat center center/cover;
+            h1 {
+              width: 6ch;
+            }
+          }
+
+          &-5 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-from-above.jpg) no-repeat center
+                center/cover;
+          }
+
+          &-6 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-pocket-borealis.jpg) no-repeat center
+                center/cover;
+          }
+
+          &-7 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-curiosity.jpg) no-repeat center
+                center/cover;
+          }
+
+          &-8 {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%,
+                rgba(0, 0, 0, 0.7)
+              ),
+              url(../img/desktop/image-fisheye.jpg) no-repeat center
+                center/cover;
+          }
+        }
+      }
+
+      .btn {
+        cursor: pointer;
+        width: 130px;
+        height: 35px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-transform: uppercase;
+        font-family: inherit;
+        letter-spacing: 4px;
+        background-color: $white;
+        border: 1px solid $very-dark-gray;
+        transition: all 0.3s ease-in-out;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $black;
+
+  .container {
+    @include flex-box(row, space-between, center, nowrap);
+
+    p {
+      color: $dark-gray;
+      font-size: 13px;
+    }
+  }
+}
+
+@import 'media';

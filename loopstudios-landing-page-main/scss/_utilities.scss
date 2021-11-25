@@ -1,0 +1,79 @@
+@mixin flex-box($direction, $justify, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar {
+  &.main {
+    @include flex-box(row, space-between, center, nowrap);
+    margin-bottom: 64px;
+    padding: 64px 0;
+  }
+
+  &.footer {
+    @include flex-box(column, flex-start, flex-start, nowrap);
+    font-size: 13px;
+    padding: 32px 0;
+
+    img {
+      margin-bottom: 20px;
+      padding-left: 16px;
+      width: 140px;
+    }
+  }
+}
+
+.menu {
+  @include flex-box(row, center, center, nowrap);
+
+  &.social-links {
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    li {
+      padding: 0 8px;
+
+      &:hover {
+        &::after {
+          left: 20%;
+          width: 60%;
+        }
+      }
+    }
+
+    i {
+      font-size: 20px;
+    }
+  }
+
+  li {
+    padding: 0 16px;
+    position: relative;
+
+    a {
+      color: $white;
+    }
+
+    &:hover {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 35%;
+        bottom: -10px;
+        height: 2px;
+        border-radius: 5px;
+        width: 30%;
+        background-color: $white;
+      }
+    }
+  }
+}
