@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "loopstudios-landing-page-main",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smneh/.git"
+    "url": "git+https://github.com/Smneh/Smneh/Frontendmentor-challenges/tree/main/loopstudios-landing-page-main.git"
   },
   "author": "Smneh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Smneh//issues"
+    "url": "https://github.com/Smneh/Smneh/Frontendmentor-challenges/tree/main/loopstudios-landing-page-main/issues"
   },
-  "homepage": "https://github.com/Smneh/#readme",
+  "homepage": "https://github.com/Smneh/Smneh/Frontendmentor-challenges/tree/main/loopstudios-landing-page-main#readme",
   "devDependencies": {
     "node-sass": "^6.0.1"
   }
