@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Barlow Semi Condensed';
+  font-size: 13px; }
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #ecf2f8; }
+
+.container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "item-1 item-1 item-2 item-5" "item-3 item-4 item-4 item-5";
+  margin: 60px 16px;
+  max-width: 1100px; }
+  .container .item {
+    padding: 24px 32px 32px 32px;
+    border-radius: 5px; }
+    .container .item .user {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 16px;
+      margin-bottom: 16px; }
+      .container .item .user img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; }
+      .container .item .user-info {
+        font-size: 14px; }
+        .container .item .user-info small {
+          opacity: 0.5; }
+    .container .item .text-bold {
+      font-weight: 600;
+      line-height: 1.2;
+      font-size: 20px;
+      margin-bottom: 16px; }
+    .container .item .text-long {
+      opacity: 0.7;
+      line-height: 1.4; }
+    .container .item-1 {
+      grid-area: item-1;
+      background-color: #7541c8;
+      color: white;
+      position: relative;
+      z-index: 0; }
+      .container .item-1 img {
+        border: 2px solid #a27cde; }
+      .container .item-1::before {
+        position: absolute;
+        content: url(../img/bg-pattern-quotation.svg);
+        z-index: -1;
+        right: 80px;
+        top: 3px; }
+    .container .item-2 {
+      grid-area: item-2;
+      background-color: #48556a;
+      color: white; }
+    .container .item-3 {
+      grid-area: item-3;
+      background-color: white;
+      color: #48556a; }
+    .container .item-4 {
+      grid-area: item-4;
+      background-color: #19212e;
+      color: white; }
+      .container .item-4 img {
+        border: 2px solid #6b38bc; }
+    .container .item-5 {
+      grid-area: item-5;
+      background-color: white;
+      color: #48556a; }
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 600px;
+    grid-template-areas: 'item-1' 'item-2' 'item-3' 'item-4' 'item-5';
+    grid-template-columns: repeat(1, 1fr); }
+    .container .item-1::before {
+      right: 5px; } }
