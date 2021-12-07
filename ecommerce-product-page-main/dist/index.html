@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>E-commerce product page</title>
+  </head>
+  <body>
+    <div class="light-box">
+      <div class="product-images modal">
+        <img src="./img/icon-close.svg" alt="" class="close-icon" />
+
+        <div class="product-img large">
+          <div class="icon prev">
+            <img src="./img/icon-previous.svg" alt="" />
+          </div>
+          <div class="icon next">
+            <img src="./img/icon-next.svg" alt="" />
+          </div>
+        </div>
+        <div class="thumbnails-container">
+          <div class="product-img thumbnail"></div>
+          <div class="product-img thumbnail"></div>
+          <div class="product-img thumbnail"></div>
+          <div class="product-img thumbnail"></div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <nav>
+          <img src="./img/icon-menu.svg" alt="" class="menu-icon" />
+          <img src="./img/logo.svg" alt="" class="logo" />
+          <div class="menu">
+            <ul >
+              <img src="./img/icon-close.svg" alt="" class="close-icon" />
+              <li><a href="#"> Collections </a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="user">
+            <div class="cart-img">
+              <img src="./img/icon-cart.svg" alt="" />
+              <div class="number"></div>
+            </div>
+            <div class="user-img"></div>
+            <div class="cart" id="cart">
+              <p class="cart-title">Cart</p>
+              <div class="cart-items"></div>
+              <button class="checkout-btn btn">Checkout</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="product-images main">
+          <div class="product-img large" id="main-large-img">
+            <div class="icon prev">
+              <img src="./img/icon-previous.svg" alt="" />
+            </div>
+            <div class="icon next">
+              <img src="./img/icon-next.svg" alt="" />
+            </div>
+          </div>
+          <div class="thumbnails-container">
+            <div class="product-img thumbnail active"></div>
+            <div class="product-img thumbnail"></div>
+            <div class="product-img thumbnail"></div>
+            <div class="product-img thumbnail"></div>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <p class="text-orange">Sneaker Company</p>
+          <h1 id="product-name">Fall Limited Edition Sneakers</h1>
+          <p class="text-long">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <div class="price-discount">
+              <h2>$125.00</h2>
+              <p class="discount">50%</p>
+            </div>
+            <div class="price-original">
+              <p>$250.00</p>
+            </div>
+          </div>
+          <div class="add-product">
+            <div class="amount">
+              <img src="./img/icon-minus.svg" alt="" class="minus" />
+              <p id="product-amount">0</p>
+              <img src="./img/icon-plus.svg" alt="" class="plus" />
+            </div>
+            <button id="add-to-cart-btn" class="btn">
+              <img src="./img/icon-cart.svg" alt="" /> Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
