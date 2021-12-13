@@ -10,11 +10,13 @@ const cartItemsContainer = document.querySelector(".cart-items")
 const mobileMenuIcon = document.querySelector(".menu-icon")
 
 let cartItems = []
-function cartItem(name, price, amount, imgURl) {
-    this.name = name
-    this.price = price
-    this.amount = amount
-    this.imgUrl = imgURl
+class CartItem {
+    constructor(name, price, amount, imgURl) {
+        this.name = name
+        this.price = price
+        this.amount = amount
+        this.imgUrl = imgURl
+    }
 }
 
 changeAmountIcons.forEach(icon => icon.addEventListener('click', changeAmount.bind(null, icon)))
@@ -113,7 +115,7 @@ function addItemToCart() {
         const priceFinal = document.querySelector(".price-discount h2").textContent.replace('$', '')
         const img = document.querySelector(".product-images.main .thumbnail:first-of-type")
         const imgUrl = window.getComputedStyle(img, false).backgroundImage.slice(4, -1).replace(/"/g, "")
-        const item = new cartItem(name, priceFinal, amount, imgUrl);
+        const item = new CartItem(name, priceFinal, amount, imgUrl);
 
         addToItemsArray(item)
         updateCartNumber()
@@ -201,7 +203,6 @@ function triggerRemoveItems(target) {
         cartItems = cartItems.filter(function (item, index, arr) {
             return item.name !== name
         })
-        cartItemsContainer.removeChild(itemEl)
         updateCartUI()
         updateCartNumber()
     }
