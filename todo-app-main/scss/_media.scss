@@ -1,0 +1,56 @@
+@media (max-width: 550px) {
+  body {
+    font-size: 15px;
+  }
+
+  main {
+    min-height: 785px;
+    &::before {
+      background-image: url(../img/bg-mobile-light.jpg);
+    }
+
+    &.dark {
+      &::before {
+        background-image: url(../img/bg-mobile-dark.jpg);
+      }
+
+      .todos-container {
+        .filters {
+          background-color: $dark-theme-very-dark-desaturated-blue;
+        }
+      }
+    }
+  }
+
+  .container {
+    .create-todo {
+      form {
+        input {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .todos-container {
+      margin-bottom: 100px;
+      .filters {
+        @include flex-box(row, center, center, wrap);
+        position: absolute;
+        bottom: -130%;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 20px 24px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .todo {
+    &.show {
+      .remove-icon {
+        display: block;
+      }
+    }
+  }
+}

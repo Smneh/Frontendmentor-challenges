@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title></title>
+  </head>
+  <body>
+    <main class="dark">
+      <div class="container">
+        <div class="title">
+          <p class="logo">Todo</p>
+          <img alt="" class="them-icon" />
+        </div>
+
+        <div class="create-todo">
+          <div class="circle-wrapper">
+            <div class="circle"></div>
+          </div>
+          <form action="" id="new-todo-from">
+            <input
+              type="text"
+              name="new-todo"
+              id="new-todo"
+              placeholder="Create a new todo..."
+            />
+          </form>
+        </div>
+
+        <div class="todos-container">
+          <div class="todos-list"></div>
+
+          <div class="footer">
+            <div class="items-left">
+              <span id="active-amount">0 </span> items left
+            </div>
+            <div class="filters">
+              <ul>
+                <li id="all" class="selected">All</li>
+                <li id="active">Active</li>
+                <li id="completed">Completed</li>
+              </ul>
+            </div>
+            <button class="clear-completed">Clear Completed</button>
+          </div>
+        </div>
+        <p class="drag-text">Drag and drop to reorder list</p>
+      </div>
+    </main>
+
+    <script src="./Sortable Lib/Sortable.js"></script>
+	  <script type="text/javascript" src="./Sortable Lib/prettify.js"></script>
+	  <script type="text/javascript" src="./Sortable Lib/run_prettify.js"></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
