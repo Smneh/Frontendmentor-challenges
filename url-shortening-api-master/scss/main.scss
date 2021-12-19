@@ -1,0 +1,321 @@
+@import 'config';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+//--General Styling--//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins';
+  font-size: 18px;
+  color: $Very-Dark-Blue;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Header
+header {
+  margin-bottom: 120px;
+  overflow-x: hidden;
+
+  nav {
+    @include flex-box(row, flex-start, center, nowrap);
+    padding: 40px 0;
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      color: $Grayish-Violet;
+      font-size: 30px;
+    }
+
+    .navigation {
+      @include flex-box(row, space-between, center, nowrap);
+      flex: 1;
+      margin-left: 64px;
+
+      .btns {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .hero {
+    @include flex-box(row, flex-start, center, nowrap);
+
+    &-text {
+      h1 {
+        font-size: 68px;
+        line-height: 1.1;
+        color: $Very-Dark-Blue;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin-bottom: 32px;
+        color: $Grayish-Violet;
+        width: 65%;
+      }
+
+      button {
+        padding: 12px 32px;
+      }
+    }
+
+    img {
+      margin-right: -250px;
+    }
+  }
+}
+
+//main
+main {
+  background-color: #efefef;
+  padding-top: 88px;
+}
+
+//sections
+section {
+  @include flex-box(column, center, center, nowrap);
+}
+
+.section {
+  &-a {
+    width: 100%;
+    margin-top: -164px;
+
+    .container {
+      div {
+        @include flex-box(row, flex-start, flex-start, nowrap);
+        width: 100%;
+        background: url(../img/bg-shorten-desktop.svg) $Dark-Violet no-repeat
+          center center/cover;
+        padding: 40px 64px 20px 64px;
+        border-radius: 7px;
+        gap: 16px;
+
+        .link-input {
+          flex-grow: 1;
+
+          input {
+            width: 100%;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 7px;
+            font-size: 17px;
+            font-family: inherit;
+            border: 3px solid transparent;
+
+            &::placeholder {
+              color: $Grayish-Violet;
+            }
+
+            &:focus {
+              outline: none;
+            }
+
+            &.empty {
+              border: 3px solid $Red;
+
+              & + .error-text {
+                visibility: visible;
+              }
+            }
+          }
+
+          .error-text {
+            color: $Red;
+            font-size: 13px;
+            font-weight: 300;
+            margin-top: 8px;
+            visibility: hidden;
+          }
+        }
+
+        button {
+          border-radius: 7px;
+          padding: 20px 32px;
+        }
+      }
+    }
+  }
+
+  &-b {
+    margin-bottom: 40px;
+
+    .shortened-links {
+      @include flex-box(column, flex-start, flex-start, nowrap);
+      margin: 16px 0;
+      gap: 16px;
+
+      .shortened-component {
+        @include flex-box(row, flex-start, center, nowrap);
+        width: 100%;
+        background-color: #fff;
+        font-size: 15px;
+        border-radius: 5px;
+
+        .original-link {
+          margin-right: auto;
+          color: $Very-Dark-Violet;
+          padding: 12px 20px;
+          max-width: 66%;
+          overflow-x: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .shortened-link {
+          color: $Cyan;
+          margin-right: 8px;
+          padding: 12px 20px;
+        }
+
+        button {
+          margin: 12px 20px;
+          border-radius: 7px;
+          padding: 12px;
+          width: 115px;
+          font-size: 14px;
+          font-weight: 500;
+          transition: background-color 0.3s ease-in;
+
+          &.copied {
+            background-color: $Dark-Violet;
+          }
+        }
+      }
+    }
+  }
+
+  &-c {
+    margin: 64px 0;
+
+    .title {
+      @include flex-box(column, center, center, nowrap);
+      text-align: center;
+
+      h2 {
+        font-size: 40px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: $Grayish-Violet;
+        width: 45%;
+      }
+    }
+
+    .statistics-container {
+      @include flex-box(row, flex-start, center, nowrap);
+      gap: 40px;
+
+      .statistic {
+        @include flex-box(column, flex-end, flex-start, nowrap);
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 32px;
+        width: calc((100% - 80px) / 3);
+        height: 250px;
+        position: relative;
+        z-index: 10;
+
+        .logo {
+          @include flex-box(column, center, center, nowrap);
+          position: absolute;
+          top: -30px;
+          background-color: $Dark-Violet;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+
+          img {
+            width: 50%;
+            height: 50%;
+          }
+        }
+
+        h3 {
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 15px;
+          color: $Grayish-Violet;
+        }
+
+        &:nth-of-type(2) {
+          margin-top: 100px;
+        }
+
+        &:nth-of-type(3) {
+          margin-top: 200px;
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          &::before {
+            position: absolute;
+            content: '';
+            width: 40px;
+            height: 10px;
+            background-color: $Cyan;
+            top: 40%;
+            left: -40px;
+          }
+        }
+      }
+    }
+  }
+
+  &-d {
+    @include flex-box(column, center, center, nowrap);
+    width: 100%;
+    padding: 64px 0;
+    background: url(../img/bg-boost-desktop.svg) $Dark-Violet no-repeat center
+      center/cover;
+
+    h1 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    button {
+      padding: 12px 40px;
+      font-size: 18px;
+    }
+  }
+}
+
+//footer
+footer {
+  background-color: $Very-Dark-Violet;
+  color: #fff;
+  padding: 64px 0 100px 0;
+
+  .container {
+    @include flex-box(row, flex-start, flex-start, nowrap);
+  }
+
+  .logo {
+    filter: invert(100%) contrast(200%);
+  }
+
+  .navigation {
+    @include flex-box(row, flex-start, flex-start, nowrap);
+    margin-left: auto;
+    gap: 80px;
+  }
+}
+@import 'media';
