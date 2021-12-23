@@ -1,0 +1,20 @@
+// Variables
+$scissors-border: hsl(40, 89%, 48%);
+$scissors-box: hsl(34, 100%, 43%);
+$paper-border: hsl(230, 93%, 61%);
+$paper-box: hsl(230, 69%, 47%);
+$rock-border: hsl(349, 71%, 52%);
+$rock-box: hsl(349, 74%, 35%);
+// Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+// Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+
+$Dark-Text: hsl(229, 25%, 31%);
+$Score-Text: hsl(229, 64%, 46%);
+$Header-Outline: hsl(217, 16%, 45%);
+
+//Background
+$radial-gradient: linear-gradient(
+  180deg,
+  rgba(31, 55, 86, 1) 0%,
+  rgba(20, 21, 57, 1) 100%
+);

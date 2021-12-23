@@ -1,0 +1,130 @@
+@media (max-width: 760px) {
+  main {
+    .container {
+      .playing-part {
+        &.show {
+          position: relative;
+          gap: 64px;
+          margin-bottom: 180px;
+
+          .column {
+            flex-direction: column-reverse;
+            gap: 24px;
+            p {
+              margin-bottom: 0;
+              font-size: 12px;
+            }
+          }
+
+          .choice {
+            width: 150px;
+            height: 150px;
+          }
+
+          .game-result {
+            &.show {
+              position: absolute;
+              top: 180px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  main {
+    .container {
+      .playing-part {
+        &.show {
+          gap: 40px;
+
+          .choice {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+
+  .choice {
+    border: 15px solid;
+  }
+}
+
+@media (max-width: 450px) {
+  .rules-modal {
+    &.show {
+      background-color: #fff;
+      position: relative;
+
+      .modal-context {
+        .title {
+          justify-content: center;
+
+          .close-icon {
+            position: absolute;
+            bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .header-context {
+      border-radius: 7px;
+      padding: 16px;
+
+      .score {
+        @include flex-box(column, flex-start, center, nowrap);
+        width: 100px;
+
+        p {
+          &:last-of-type {
+            font-size: 50px;
+          }
+        }
+      }
+
+      .logo {
+        width: 110px;
+      }
+    }
+  }
+
+  .choice {
+    width: 120px;
+    height: 120px;
+
+    img {
+      width: 45%;
+    }
+  }
+
+  main {
+    .container {
+      .selection-part {
+        height: 280px;
+        margin-bottom: 60px;
+
+        &::before {
+          width: 200px;
+          height: 200px;
+        }
+
+        .row {
+          &:first-of-type {
+            gap: 48px;
+          }
+        }
+      }
+    }
+  }
+}

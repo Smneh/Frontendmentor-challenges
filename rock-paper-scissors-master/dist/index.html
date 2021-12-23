@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="rules-modal">
+      <div class="modal-context">
+        <div class="title">
+          <h1>Rules</h1>
+          <img src="./img/icon-close.svg" alt="" class="close-icon" />
+        </div>
+        <div class="rules">
+          <img src="./img/image-rules.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="header-context">
+          <img src="./img/logo.svg" alt="" class="logo" />
+          <div class="score">
+            <p>Score</p>
+            <p id="user-score">0</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="selection-part">
+          <div class="row">
+            <div class="choice paper">
+              <img src="./img/icon-paper.svg" alt="" />
+            </div>
+            <div class="choice scissors">
+              <img src="./img/icon-scissors.svg" alt="" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="choice rock">
+              <img src="./img/icon-rock.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="playing-part row">
+          <div class="user-choice column">
+            <p>You picked</p>
+            <div class="choice">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="game-result">
+            <p id="result"></p>
+            <button id="play-again-btn">play again</button>
+          </div>
+          <div class="house-choice column">
+            <p>The house picked</p>
+            <div class="choice empty">
+              <img src="" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="rules-btn">Rules</button>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

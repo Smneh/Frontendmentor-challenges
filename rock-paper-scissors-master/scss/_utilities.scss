@@ -1,0 +1,68 @@
+@mixin flex-box($direction, $justify, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.row {
+  @include flex-box(row, center, center, nowrap);
+}
+
+.column {
+  @include flex-box(column, center, center, nowrap);
+}
+
+.choice {
+  @include flex-box(row, center, center, nowrap);
+  width: 150px;
+  height: 150px;
+  background-color: #ddd;
+  border-radius: 50%;
+  border: 20px solid;
+  position: relative;
+
+  &.paper {
+    border-color: $paper-border;
+    box-shadow: inset 0 5px 0 0 #bcbcbc, 0px 8px 0px 0px $paper-box;
+  }
+
+  &.scissors {
+    border-color: $scissors-border;
+    box-shadow: inset 0 5px 0 0 #bcbcbc, 0px 8px 0px 0px $scissors-box;
+  }
+
+  &.rock {
+    border-color: $rock-border;
+    box-shadow: inset 0 5px 0 0 #bcbcbc, 0px 8px 0px 0px $rock-box;
+  }
+
+  &.empty {
+    background-color: rgba(12, 17, 48, 0.432);
+    border: none;
+    animation: pulse-animation 1.5s ease-out infinite;
+  }
+
+  &.winner {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 50%;
+      box-shadow: 0 0 0 70px rgba(255, 255, 255, 0.03),
+        0 0 0 120px rgba(255, 255, 255, 0.02),
+        0 0 0 170px rgba(255, 255, 255, 0.01);
+    }
+  }
+}
