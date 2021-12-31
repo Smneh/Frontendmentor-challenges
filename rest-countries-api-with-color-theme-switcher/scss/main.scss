@@ -1,0 +1,289 @@
+@import 'config';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+//--General Styling--//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans';
+  font-size: 14px;
+  color: $Very-Dark-Blue-Text;
+  background-color: $Very-Light-Gray;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
+  min-height: 100vh;
+
+  &.dark {
+    color: $White;
+    background-color: $Very-Dark-Blue;
+
+    header,
+    .country .info,
+    main .search-filter .user-input,
+    main .search-filter .user-input input,
+    main .search-filter .filter ul,
+    main .search-filter .filter a,
+    main .back-main-btn,
+    main .country-wrapper .borders .border {
+      background-color: $Dark-Blue;
+    }
+
+    header {
+      margin-bottom: 0;
+
+      nav button i {
+        &.far {
+          display: none;
+        }
+        &.fas {
+          display: inline;
+        }
+      }
+    }
+
+    main {
+      .search-filter {
+        .user-input {
+          input::placeholder,
+          i {
+            color: $White;
+          }
+
+          input {
+            &:focus::-webkit-search-cancel-button,
+            &:hover::-webkit-search-cancel-button {
+              filter: contrast(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+//
+header {
+  padding: 20px 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease-in;
+
+  nav {
+    @include flex-box(row, space-between, center, nowrap);
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      font: inherit;
+      font-weight: 600;
+      color: inherit;
+
+      i {
+        margin-right: 4px;
+
+        &.fas {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//
+main {
+  padding: 32px 16px;
+
+  .main-context {
+    .search-filter {
+      @include flex-box(row, space-between, flex-start, nowrap);
+      margin-bottom: 32px;
+
+      .user-input {
+        @include flex-box(row, space-between, center, nowrap);
+        background-color: $White;
+        padding: 16px 32px;
+        width: 450px;
+        gap: 8px;
+        border-radius: 3px;
+        box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease-in;
+
+        i {
+          color: $Dark-Gray;
+          font-size: 15px;
+          font-weight: 600;
+          transition: color 0.3s ease-in;
+        }
+
+        input {
+          flex-grow: 1;
+          font: inherit;
+          border: none;
+          background-color: $White;
+          color: inherit;
+          transition: background-color 0.3s ease-in;
+
+          &::placeholder {
+            color: $Dark-Gray;
+            transition: color 0.3s ease-in;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          &:focus::-webkit-search-cancel-button,
+          &:hover::-webkit-search-cancel-button {
+            filter: invert(0%) sepia(9%) saturate(0%) hue-rotate(149deg)
+              brightness(102%) contrast(104%);
+          }
+        }
+      }
+
+      .filter {
+        @include flex-box(column, flex-start, flex-start, nowrap);
+        font-weight: 600;
+        width: 220px;
+        position: relative;
+
+        a,
+        ul {
+          width: 100%;
+          background-color: $White;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.15);
+          transition: background-color 0.3s ease-in;
+        }
+
+        a {
+          @include flex-box(row, space-between, center, nowrap);
+          cursor: pointer;
+        }
+
+        ul {
+          display: none;
+
+          &.show {
+            @include flex-box(column, flex-start, flex-start, nowrap);
+            gap: 12px;
+            z-index: 10;
+            position: absolute;
+            top: 65px;
+            li {
+              cursor: pointer;
+
+              &:hover {
+                font-weight: 800;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .countries-container {
+      @include grid(40px, 4, 1fr);
+    }
+  }
+
+  .details-part {
+    display: none;
+
+    .back-main-btn {
+      cursor: pointer;
+      background-color: $White;
+      transition: background-color 0.3s ease-in;
+      box-shadow: 0px 1px 7px 2px rgba(0, 0, 0, 0.2);
+      border: none;
+      width: 130px;
+      padding: 12px 4px;
+      border-radius: 5px;
+      color: inherit;
+      margin-bottom: 64px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    .country-wrapper {
+      @include flex-box(row, flex-start, center, nowrap);
+      gap: 100px;
+
+      .flag {
+        width: 50%;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      .detail {
+        width: 50%;
+
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        .info {
+          @include flex-box(row, space-between, flex-start, nowrap);
+          margin-bottom: 40px;
+
+          p {
+            font-weight: 600;
+            margin-bottom: 8px;
+
+            span {
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+      .borders {
+        @include flex-box(row, flex-start, center, wrap);
+        gap: 12px;
+
+        p {
+          font-weight: 600;
+        }
+
+        .border {
+          cursor: pointer;
+          background-color: $White;
+          transition: background-color 0.3s ease-in;
+          box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.15);
+          padding: 8px 12px;
+          min-width: 110px;
+          border-radius: 3px;
+          text-align: center;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+@import 'media';

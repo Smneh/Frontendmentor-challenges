@@ -1,0 +1,59 @@
+@mixin flex-box($direction, $justify, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin grid($gap, $col-number, $col-size) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat($col-number, $col-size);
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.country {
+  @include flex-box(column, flex-start, flex-start, nowrap);
+  box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .flag {
+    width: 100%;
+    height: 160px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .info {
+    width: 100%;
+    background-color: $White;
+    padding: 32px 16px;
+    transition: background-color 0.3s ease-in;
+
+    h3 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-weight: 600;
+      margin-bottom: 4px;
+
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+}
