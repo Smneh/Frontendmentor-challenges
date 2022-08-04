@@ -7,7 +7,6 @@
       <li><a href="#">Women</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
-  <!--    <p>{{ $t("header.login") }}</p>-->
     </ul>
   </div>
 </template>
